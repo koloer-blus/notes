@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .wrapp {
+            width: 1000px;
+            height: auto;
+            padding: 25px;
+            border-radius: 25px;
+            overflow: hidden;
+            text-align: center;
+            margin: 10px auto;
+        }
+        
+        #sunrise {
+            transform: translateX(-20px);
+            -webkit-transform: translateX(-20px);
+            -moz-transform: translateX(-20px);
+            -o-transform: translateX(-20px);
+        }
+        /* sunrise animation */
+        
+        #sunrise>g>g:nth-child(1) {
+            animation: sun-layer-1 1.6s;
+        }
+        
+        #sunrise>g>g:nth-child(2) {
+            animation: sun-shadow 5s infinite;
+            animation-delay: 5s;
+            transform-origin: center center;
+            -moz-transform-origin: 170px 170px;
+        }
+        
+        #sunrise>g>g:nth-child(2)>path {
+            animation: sun-shadow-path 5s;
+            animation-delay: 3s;
+            transform-origin: center center;
+            -moz-transform-origin: 170px 170px;
+        }
+        
+        #sunrise>g>g:nth-child(3) {
+            animation: sun-set 5s;
+        }
+        
+        #sunrise>g>g:nth-child(4) {
+            animation: sun-layer-4 2s;
+        }
+        
+        #sunrise>g>g:nth-child(5) {
+            animation: sun-layer-4 2.3s;
+        }
+        
+        @keyframes sun-layer-1 {
+            0% {
+                transform: translate(0px, 400px);
+                -webkit-transform: translate(0px, 400px);
+                -moz-transform: translate(0px, 400px);
+                -o-transform: translate(0px, 400px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes sun-layer-4 {
+            0% {
+                transform: translate(0px, 200px);
+                -webkit-transform: translate(0px, 200px);
+                -moz-transform: translate(0px, 200px);
+                -o-transform: translate(0px, 200px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes sun-set {
+            0% {
+                opacity: 0;
+                transform: translate(0px, 400px);
+                -webkit-transform: translate(0px, 400px);
+                -moz-transform: translate(0px, 400px);
+                -o-transform: translate(0px, 400px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes sun-shadow-path {
+            0% {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+                -moz-transform: scale(0);
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes sun-shadow {
+            0% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(1.02);
+                -webkit-transform: scale(1.02);
+                -moz-transform: scale(1.02);
+                transform: scale(1.02);
+            }
+            20% {
+                transform: scale(.97);
+                -webkit-transform: scale(.97);
+                -moz-transform: scale(.97);
+                transform: scale(.97);
+            }
+            30% {
+                transform: scale(1.04);
+                -webkit-transform: scale(1.04);
+                -moz-transform: scale(1.04);
+                transform: scale(1.04);
+            }
+            40% {
+                transform: scale(.98);
+                -webkit-transform: scale(.98);
+                -moz-transform: scale(.98);
+                transform: scale(.98);
+            }
+            50% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        /* moonrise animation */
+        
+        #moonrise #moon {
+            animation: moon-in 2.4s;
+        }
+        
+        #moonrise>g>g:nth-child(1) {
+            animation: moon-layer-1 1.6s;
+        }
+        
+        #moonrise>g>g:nth-child(2) {
+            animation: moon-layer-2 1.8s;
+        }
+        
+        #moonrise>g>g:nth-child(3) {
+            animation: moon-layer-3 2s;
+        }
+        
+        #moonrise>g>g:nth-child(4) {
+            animation: moon-layer-4 2.2s;
+        }
+        
+        @keyframes moon-in {
+            0% {
+                transform: translate(-900px, -900px);
+                -webkit-transform: translate(-900px, -900px);
+                -moz-transform: translate(-900px, -900px);
+                -o-transform: translate(-900px, -900px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes moon-layer-1 {
+            0% {
+                transform: translate(-500px, -500px);
+                -webkit-transform: translate(-500px, -500px);
+                -moz-transform: translate(-500px, -500px);
+                -o-transform: translate(-500px, -500px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes moon-layer-2 {
+            0% {
+                transform: translate(-600px, -600px);
+                -webkit-transform: translate(-600px, -600px);
+                -moz-transform: translate(-600px, -600px);
+                -o-transform: translate(-600px, -600px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes moon-layer-3 {
+            0% {
+                transform: translate(-700px, -700px);
+                -webkit-transform: translate(-700px, -700px);
+                -moz-transform: translate(-700px, -700px);
+                -o-transform: translate(-700px, -700px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes moon-layer-4 {
+            0% {
+                transform: translate(-800px, -800px);
+                -webkit-transform: translate(-800px, -800px);
+                -moz-transform: translate(-800px, -800px);
+                -o-transform: translate(-800px, -800px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        /* rainy animation */
+        
+        #rainy>g>g:nth-child(1) {
+            animation: rain-layer-1 1.6s;
+        }
+        
+        #rainy>g>g#cloud-1 {
+            animation: rain-clouds 2s;
+        }
+        
+        #rainy>g>g#cloud-2 {
+            animation: rain-clouds 2.3s;
+        }
+        
+        #rainy>g>g#fire-light {
+            animation: fire-light 3s;
+        }
+        
+        #rainy>g line {
+            animation: rain infinite;
+        }
+        
+        #rainy>g line#ln-1 {
+            animation-duration: 1.4s;
+        }
+        
+        #rainy>g line#ln-2 {
+            animation-duration: 1.8s;
+        }
+        
+        #rainy>g line#ln-3 {
+            animation-duration: 1s;
+        }
+        
+        #rainy>g line#ln-4 {
+            animation-duration: 1.7s;
+        }
+        
+        #rainy>g line#ln-5 {
+            animation-duration: .6s;
+        }
+        
+        @keyframes rain-layer-1 {
+            0% {
+                transform: translate(0px, -400px);
+                -webkit-transform: translate(0px, -400px);
+                -moz-transform: translate(0px, -400px);
+                -o-transform: translate(0px, -400px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes rain-clouds {
+            0% {
+                transform: translate(0px, -200px);
+                -webkit-transform: translate(0px, -200px);
+                -moz-transform: translate(0px, -200px);
+                -o-transform: translate(0px, -200px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes rain {
+            0% {
+                transform: translate(100px, -100px);
+                -webkit-transform: translate(100px, -100px);
+                -moz-transform: translate(100px, -100px);
+                -o-transform: translate(100px, -100px);
+            }
+            100% {
+                transform: translate(-100px, 100px);
+                -webkit-transform: translate(-100px, 100px);
+                -moz-transform: translate(-100px, 100px);
+                -o-transform: translate(-100px, 100px);
+            }
+        }
+        
+        @keyframes fire-light {
+            0% {
+                opacity: 0;
+            }
+            3% {
+                opacity: 0.5;
+            }
+            6% {
+                opacity: 0;
+            }
+            9% {
+                opacity: 1;
+            }
+            12% {
+                opacity: 0;
+            }
+            30% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            36% {
+                opacity: 0.5;
+            }
+            39% {
+                opacity: 1;
+            }
+            42% {
+                opacity: 0;
+            }
+            95% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* snow animation */
+        
+        #snow>g>g:nth-child(1) {
+            animation: snow-layer-1 1.3s;
+        }
+        
+        #snow>g>#back-mountain {
+            animation: mountains 1.6s;
+        }
+        
+        #snow>g>#middle-mountain {
+            animation: mountains 2.6s;
+        }
+        
+        #snow>g>#front-mountain {
+            animation: mountains 3.6s;
+        }
+        
+        #snow #tree {
+            animation: tree 1s;
+        }
+        
+        #snow #tree>g {
+            transform-origin: center center;
+        }
+        
+        #snow>g>#tree>g#middle-tree {
+            animation: tree-leaf-2 2.5s;
+            animation-delay: 3.6s;
+        }
+        
+        #snow>g>#tree>g#top-tree {
+            animation: tree-leaf-1 2.5s;
+            animation-delay: 3.6s;
+        }
+        
+        #snow #snows>g {
+            animation: snows infinite;
+        }
+        
+        #snow #snows>g path {
+            animation: snows-flake infinite;
+        }
+        
+        #snow #snows>g:nth-child(1) {
+            animation-duration: 7.4s;
+        }
+        
+        #snow #snows>g:nth-child(2) {
+            animation-duration: 7.9s;
+        }
+        
+        #snow #snows>g:nth-child(3) {
+            animation-duration: 8.4s;
+        }
+        
+        #snow #snows>g:nth-child(4) {
+            animation-duration: 7.1s;
+        }
+        
+        #snow #snows>g:nth-child(5) {
+            animation-duration: 7.8s;
+        }
+        
+        #snow #snows>g:nth-child(6) {
+            animation-duration: 8.6s;
+        }
+        
+        #snow #snows>g:nth-child(7) {
+            animation-duration: 8.1s;
+        }
+        
+        #snow #snows>g:nth-child(8) {
+            animation-duration: 7.1s;
+        }
+        
+        #snow #snows>g:nth-child(9) {
+            animation-duration: 7.5s;
+        }
+        
+        #snow #snows>g:nth-child(10) {
+            animation-duration: 7.9s;
+        }
+        
+        #snow #snows>g:nth-child(11) {
+            animation-duration: 6.9s;
+        }
+        
+        #snow #snows>g:nth-child(12) {
+            animation-duration: 7.6s;
+        }
+        
+        #snow #snows>g:nth-child(13) {
+            animation-duration: 8.2s;
+        }
+        
+        #snow #snows>g:nth-child(1) path {
+            animation-duration: 7.4s;
+        }
+        
+        #snow #snows>g:nth-child(2) path {
+            animation-duration: 7.9s;
+        }
+        
+        #snow #snows>g:nth-child(3) path {
+            animation-duration: 8.4s;
+        }
+        
+        #snow #snows>g:nth-child(4) path {
+            animation-duration: 7.1s;
+        }
+        
+        #snow #snows>g:nth-child(5) path {
+            animation-duration: 7.8s;
+        }
+        
+        #snow #snows>g:nth-child(6) path {
+            animation-duration: 8.6s;
+        }
+        
+        #snow #snows>g:nth-child(7) path {
+            animation-duration: 8.1s;
+        }
+        
+        #snow #snows>g:nth-child(8) path {
+            animation-duration: 7.1s;
+        }
+        
+        #snow #snows>g:nth-child(9) path {
+            animation-duration: 7.5s;
+        }
+        
+        #snow #snows>g:nth-child(10) path {
+            animation-duration: 7.9s;
+        }
+        
+        #snow #snows>g:nth-child(11) path {
+            animation-duration: 6.9s;
+        }
+        
+        #snow #snows>g:nth-child(12) path {
+            animation-duration: 7.6s;
+        }
+        
+        #snow #snows>g:nth-child(13) path {
+            animation-duration: 8.2s;
+        }
+        
+        @keyframes snows {
+            0% {
+                transform: translate(0px, -150px);
+                -webkit-transform: translate(0px, -150px);
+                -moz-transform: translate(0px, -150px);
+                -o-transform: translate(0px, -150px);
+            }
+            100% {
+                transform: translate(0px, 150px);
+                -webkit-transform: translate(0px, 150px);
+                -moz-transform: translate(0px, 150px);
+                -o-transform: translate(0px, 150px);
+            }
+        }
+        
+        @keyframes snows-flake {
+            0% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(20px, 0px);
+                -webkit-transform: translate(20px, 0px);
+                -moz-transform: translate(20px, 0px);
+                -o-transform: translate(20px, 0px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(-20px, 0px);
+                -webkit-transform: translate(-20px, 0px);
+                -moz-transform: translate(-20px, 0px);
+                -o-transform: translate(-20px, 0px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes snow-layer-1 {
+            0% {
+                transform: translate(0px, 400px);
+                -webkit-transform: translate(0px, 400px);
+                -moz-transform: translate(0px, 400px);
+                -o-transform: translate(0px, 400px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes mountains {
+            0% {
+                transform: translate(0px, 200px);
+                -webkit-transform: translate(0px, 200px);
+                -moz-transform: translate(0px, 200px);
+                -o-transform: translate(0px, 200px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes tree {
+            0% {
+                transform: translate(200px, 0px);
+                -webkit-transform: translate(200px, 0px);
+                -moz-transform: translate(200px, 0px);
+                -o-transform: translate(200px, 0px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+                -webkit-transform: translate(0px, 0px);
+                -moz-transform: translate(0px, 0px);
+                -o-transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes tree-leaf-1 {
+            0% {
+                transform: rotate(8deg) translateX(5px);
+                ;
+                -webkit-transform: rotate(8deg) translateX(5px);
+                ;
+                -moz-transform: rotate(8deg) translateX(5px);
+                ;
+                -o-transform: rotate(8deg) translateX(5px);
+                ;
+            }
+            30% {
+                transform: rotate(-8deg) translateX(-5px);
+                -webkit-transform: rotate(-8deg) translateX(-5px);
+                -moz-transform: rotate(-8deg) translateX(-5px);
+                -o-transform: rotate(-8deg) translateX(-5px);
+            }
+            60% {
+                transform: rotate(4deg) translateX(-4px);
+                -webkit-transform: rotate(4deg) translateX(-4px);
+                -moz-transform: rotate(4deg) translateX(-4px);
+                -o-transform: rotate(4deg) translateX(-4px);
+            }
+            80% {
+                transform: rotate(-2deg) translateX(2px);
+                -webkit-transform: rotate(-2deg) translateX(2px);
+                -moz-transform: rotate(-2deg) translateX(2px);
+                -o-transform: rotate(-2deg) translateX(2px);
+            }
+            100% {
+                transform: rotate(0deg) translateX(0px);
+                -webkit-transform: rotate(0deg) translateX(0px);
+                -moz-transform: rotate(0deg) translateX(0px);
+                -o-transform: rotate(0deg) translateX(0px);
+            }
+        }
+        
+        @keyframes tree-leaf-2 {
+            0% {
+                transform: rotate(8deg) translateX(3px);
+                ;
+                -webkit-transform: rotate(8deg) translateX(3px);
+                ;
+                -moz-transform: rotate(8deg) translateX(3px);
+                ;
+                -o-transform: rotate(8deg) translateX(3px);
+                ;
+            }
+            25% {
+                transform: rotate(-8deg) translateX(-3px);
+                -webkit-transform: rotate(-8deg) translateX(-3px);
+                -moz-transform: rotate(-8deg) translateX(-3px);
+                -o-transform: rotate(-8deg) translateX(-3px);
+            }
+            50% {
+                transform: rotate(4deg) translateX(-2px);
+                -webkit-transform: rotate(4deg) translateX(-2px);
+                -moz-transform: rotate(4deg) translateX(-2px);
+                -o-transform: rotate(4deg) translateX(-2px);
+            }
+            75% {
+                transform: rotate(-2deg) translateX(1px);
+                -webkit-transform: rotate(-2deg) translateX(1px);
+                -moz-transform: rotate(-2deg) translateX(1px);
+                -o-transform: rotate(-2deg) translateX(1px);
+            }
+            100% {
+                transform: rotate(0deg) translateX(0px);
+                -webkit-transform: rotate(0deg) translateX(0px);
+                -moz-transform: rotate(0deg) translateX(0px);
+                -o-transform: rotate(0deg) translateX(0px);
+            }
+        }
+        /** Template css **/
+        
+        #dribbble-link {
+            position: relative;
+        }
+        
+        #dribbble-link img {
+            position: relative;
+            top: 30px;
+        }
+        
+        #dribbble-link span {
+            background: #aaa;
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            opacity: 0;
+            position: absolute;
+            right: 45px;
+            width: 250px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            top: 15px;
+        }
+        
+        #dribbble-link:hover span {
+            opacity: 1;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        #dribbble-link span:after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            right: -5px;
+            background: #aaa;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            top: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapp">
+        <svg id="wheader" x="0px" y="0px" width="900px" height="300px" viewBox="0 0 1200 300" enable-background="new 0 0 1200 300">
+        <!-- Start Filters -->
+        <filter  id="sunrise-4-shadow">
+                <feColorMatrix  type="matrix" values="0.98 0 0 0 0 0 0.68 0 0 0 0 0 0.09 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="5" result="blur"></feGaussianBlur>
+            <feOffset  dy="-5" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="sunrise-3-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.95 0 0 0 0 0 0.58 0 0 0 0 0 0.14 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="5" result="blur"></feGaussianBlur>
+            <feOffset  dy="-5" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="sunrise-2-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.85 0 0 0 0 0 0.29 0 0 0 0 0 0.16 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="2" result="blur"></feGaussianBlur>
+            <feOffset  dy="-3" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="sunrise-1-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.32 0 0 0 0 0 0.6 0 0 0 0 0 0.56 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="1" result="blur"></feGaussianBlur>
+            <feOffset  dy="-3" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="snow-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.73 0 0 0 0 0 0.89 0 0 0 0 0 0.87 0 0 0 0 0 1 0 ">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="2" result="blur"></feGaussianBlur>
+            <feOffset  dy="-4" dx="1" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="rainy-firelight-shadow">
+            <feColorMatrix  type="matrix" values="2 1.9 1.5 -0.2 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"></feColorMatrix>
+            <feGaussianBlur  stdDeviation="7" result="coloredBlur"></feGaussianBlur>
+            <feMerge>
+                <feMergeNode  in="coloredBlur"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <defs>
+            <filter  id="rainy-cloud2-shadow">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"></feGaussianBlur>
+                <feOffset  dy="6" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+                <feMerge>
+                    <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                    <feMergeNode  in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <defs>
+            <filter  id="rainy-cloud1-shadow">
+                
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"></feGaussianBlur>
+                <feOffset  dy="6" dx="-2" in="blur" result="offsetBlurredAlpha"></feOffset>
+                <feMerge>
+                    <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                    <feMergeNode  in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <filter  id="moonrise-4-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.11 0 0 0 0 0 0.5 0 0 0 0 0 0.76 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="6" result="blur"></feGaussianBlur>
+            <feOffset  dy="0" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="moonrise-3-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.26 0 0 0 0 0 0.62 0 0 0 0 0 0.85 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="2" result="blur"></feGaussianBlur>
+            <feOffset  dy="5" dx="6" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="moonrise-2-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.16 0 0 0 0 0 0.5 0 0 0 0 0 0.76 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="2" result="blur"></feGaussianBlur>
+            <feOffset  dy="5" dx="6" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  id="moonrise-1-shadow">
+            
+                <feColorMatrix  type="matrix" values="0.11 0 0 0 0 0 0.5 0 0 0 0 0 0.76 0 0 0 0 0 1 0">
+                </feColorMatrix>
+            <feGaussianBlur  stdDeviation="4" result="blur"></feGaussianBlur>
+            <feOffset  dy="0" dx="2" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter  height="130%" width="140%" filterUnits="objectBoundingBox" y="-15%" x="-15%" id="shadow-box">
+            <feGaussianBlur  in="SourceAlpha" stdDeviation="6" result="blur"></feGaussianBlur>
+            <feOffset  dy="0" dx="0" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feComponentTransfer>
+                <feFuncA  type="linear" slope="0.5"></feFuncA>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+                <feMergeNode  in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <!-- End Filters -->
+        <!-- Start Clip-path -->
+        <defs>
+            <clipPath id="sunrise-clip">
+                <use xlink:href="#sunrise-wrapp"/>
+            </clipPath>
+            <clipPath id="moonrise-clip">
+                <use xlink:href="#moonrise-wrapp"/>
+            </clipPath>
+            <clipPath id="rainy-clip">
+                <use xlink:href="#rainy-wrapp"/>
+            </clipPath>
+            <clipPath id="snow-clip">
+                <use xlink:href="#snow-wrapp"/>
+            </clipPath>
+        </defs>
+        <!-- End Clip-path -->
+        <g filter="url(#shadow-box)" id="sunrise">
+            <g clip-path="url(#sunrise-clip)">
+                <g>
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="163.9129" y1="15.8385" x2="163.9129" y2="281.3065">
+                        <stop  offset="0" style="stop-color:#EEB13B"/>
+                        <stop  offset="0.1331" style="stop-color:#F0A933"/>
+                        <stop  offset="0.4103" style="stop-color:#F39D26"/>
+                        <stop  offset="0.6958" style="stop-color:#F69620"/>
+                        <stop  offset="1" style="stop-color:#F7941E"/>
+                    </linearGradient>
+                    <path id="sunrise-wrapp" fill="url(#SVGID_1_)" d="M298.757,159.235c0,65.011-50.97,119.854-116.505,119.854h-38.835
+                        c-65.536,0-114.348-54.842-114.348-119.854v-27.823c0-65.011,48.812-119.854,114.348-119.854h38.835
+                        c65.536,0,116.505,54.842,116.505,119.854V159.235z"/>
+                </g>
+                <g id="sunset-shadow" filter="url(#sunrise-3-shadow)" display="none">
+                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="164.5594" y1="51.1593" x2="164.5594" y2="237.0643">
+                        <stop  offset="0" style="stop-color:#FEBC12"/>
+                        <stop  offset="0.078" style="stop-color:#FDBA13"/>
+                        <stop  offset="0.5241" style="stop-color:#FCB116"/>
+                        <stop  offset="1" style="stop-color:#FBAE17"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_2_)" d="M257.512,143.213c0,51.336-41.616,92.953-92.953,92.953l0,0c-51.336,0-92.953-41.616-92.953-92.953
+                        l0,0c0-51.336,41.616-92.953,92.953-92.953l0,0C215.896,50.26,257.512,91.877,257.512,143.213L257.512,143.213z"/>
+                </g>
+                <g filter="url(#sunrise-4-shadow)">
+                    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="164.5594" y1="87.04" x2="164.5594" y2="191.7689">
+                        <stop  offset="0" style="stop-color:#F8F186"/>
+                        <stop  offset="0.1269" style="stop-color:#F6EF75"/>
+                        <stop  offset="0.3352" style="stop-color:#F4ED5B"/>
+                        <stop  offset="0.5482" style="stop-color:#F2EB45"/>
+                        <stop  offset="0.767" style="stop-color:#F1EA37"/>
+                        <stop  offset="1" style="stop-color:#F1EA32"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_3_)" d="M216.924,142.056c0,28.92-23.444,52.364-52.364,52.364l0,0c-28.92,0-52.364-23.444-52.364-52.364
+                        l0,0c0-28.92,23.444-52.364,52.364-52.364l0,0C193.48,89.692,216.924,113.136,216.924,142.056L216.924,142.056z"/>
+                </g>
+                <g>
+                    <g filter="url(#sunrise-2-shadow)">
+                        <path fill="#F2EA12" d="M29.319,155.439c0,0,16.498-18.698,49.22-18.698s38.116,39.554,109.673,38.476
+                            c0,0,12.63-1.169,49.802-4.27c35.958,0,53.758,23.688,53.758,23.688l1.303,1.348c-14.44,48.53-57.266,83.107-110.574,83.107
+                            h-38.835c-65.536,0-114.348-54.842-114.348-119.854V155.439L29.319,155.439z"/>
+                    </g>
+                    <path fill="#6AC7BA" d="M29.319,155.189c0,0,16.498-18.698,49.22-18.698s38.116,39.554,109.673,38.476
+                        c0,0,12.63-1.169,49.802-4.27c35.958,0,53.758,23.688,53.758,23.688l1.303,1.348c-14.44,48.53-57.266,83.107-110.574,83.107
+                        h-38.835c-65.536,0-114.348-54.842-114.348-119.854V155.189L29.319,155.189z"/>
+                </g>
+                <g filter="url(#sunrise-1-shadow)">
+                    <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="150.4242" y1="278.3283" x2="150.6907" y2="155.3442">
+                        <stop  offset="0" style="stop-color:#ADD473"/>
+                        <stop  offset="1" style="stop-color:#D6E7B1"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_4_)" d="M29.15,163.833c0,0,14.712-9.002,33.275-8.98c32.722,0.039,57.916,25.8,82.929,41.24
+                        c0,0,36.453,23.912,82.165,26.542c31.284,0.876,43.51,12.765,43.51,12.765l1.008,0.875c-20.92,26.162-52.942,42.815-89.735,42.815
+                        l-39.914-0.135C78.454,278.954,31.459,226.745,29.15,163.833"/>
+                </g>
+            </g>
+        </g>
+        <g filter="url(#shadow-box)" id="moonrise">
+            <g clip-path="url(#moonrise-clip)">
+                <g>
+                    <path id="moonrise-wrapp" fill="#2C88C9" d="M586.606,157.964c0,64.994-50.956,119.822-116.475,119.822h-38.825
+                        c-65.518,0-114.318-54.828-114.318-119.822v-27.816c0-64.994,48.799-119.822,114.318-119.822h38.825
+                        c65.518,0,116.475,54.828,116.475,119.822V157.964z"/>
+                </g>
+                <g filter="url(#moonrise-1-shadow)">
+                    <path fill="#489BD5" d="M429.239,276.659c0,0,138.853-23.187,142.897-169.32c0.94-33.959-6.1-45.329-6.1-45.329l-1.232-2.143
+                        c-20.977-29.715-54.98-49.364-94.201-49.364h-38.825c-65.518,0-114.318,54.828-114.318,119.822v27.816
+                        c0,61.955,44.343,114.673,105.24,119.467L429.239,276.659z"/>
+                </g>
+                <g filter="url(#moonrise-2-shadow)">
+                    <path fill="#47C8F5" d="M333.7,220.821c0,0,22.381,6.051,46.177,7.04c28.13,1.168,146.402-16.087,153.322-153.053
+                        c0,0,0.833-36.821-11.3-51.65l0,0c-15.461-7.868-33.102-12.831-51.768-12.831h-38.825c-65.518,0-114.318,54.828-114.318,119.822
+                        v27.816c0,22.778,5.994,44.308,16.6,62.666L333.7,220.821z"/>
+                </g>
+                <g filter="url(#moonrise-3-shadow)">
+                    <path fill="#85D3E6" d="M318.349,120.642c0,0,33.972,36.668,78.908,36.668s113.239-27.86,114.857-109.285
+                        c0.346-17.432-2.516-29.298-2.516-29.298l-0.468-1.579c-12.124-4.411-25.224-6.822-38.964-6.822h-38.825
+                        c-61.915,0-108.9,48.964-113.88,109.199L318.349,120.642z"/>
+                </g>
+                <g id="moon" filter="url(#moonrise-4-shadow)">
+                    <path fill="#FFFFFF" d="M398.134,39.16c9.822,2.421,17.682,11.87,17.682,22.44c0,12.434-10.079,22.513-22.513,22.513
+                        c-10.782,0-20.094-7.989-22.298-18.111l0,0c-1.058,3.593-1.926,6.986-1.926,10.922c0,22.112,17.926,40.038,40.038,40.038
+                        c22.112,0,40.038-17.926,40.038-40.038s-17.926-40.038-40.038-40.038C405.099,36.886,401.794,38.059,398.134,39.16L398.134,39.16z
+                        "/>
+                </g>
+            </g>
+        </g>
+        <g filter="url(#shadow-box)" id="rainy">
+            <g  clip-path="url(#rainy-clip)">
+                <g>
+                    <path id="rainy-wrapp" fill="#1F3663" d="M885.869,158.056c0,64.721-50.742,119.319-115.985,119.319h-38.662
+                        c-65.243,0-113.837-54.597-113.837-119.319v-27.699c0-64.721,48.594-119.319,113.837-119.319h38.662
+                        c65.243,0,115.985,54.597,115.985,119.319V158.056z"/>
+                </g>
+                <g id="fire-light" filter="url(#rainy-firelight-shadow)" display="none">
+                    <polygon fill="#F6E504" points="734.787,169.949 702.569,169.949 784.009,83.855 752.507,154.377 752.529,154.351 782.6,154.351 
+                        701.159,240.445 734.809,169.923 		"/>
+                </g>
+                <g id="rains" display="none">
+                    <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="664.0717" y1="132.7927" x2="728.4339" y2="132.7927">
+                        <stop  offset="0" style="stop-color:#2B6C95"/>
+                        <stop  offset="1" style="stop-color:#1F3663"/>
+                    </linearGradient>
+                    
+                        <line id="ln-1" fill="none" stroke="url(#SVGID_5_)" stroke-linecap="round" stroke-miterlimit="10" x1="664.572" y1="164.474" x2="727.934" y2="101.112"/>
+                    <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="762.6053" y1="181.3883" x2="826.9675" y2="181.3883">
+                        <stop  offset="0" style="stop-color:#1C4A6B"/>
+                        <stop  offset="1" style="stop-color:#1F3663"/>
+                    </linearGradient>
+                    
+                        <line id="ln-2" fill="none" stroke="url(#SVGID_6_)" stroke-linecap="round" stroke-miterlimit="10" x1="763.105" y1="213.069" x2="826.468" y2="149.707"/>
+                    <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="666.2195" y1="209.8376" x2="702.6594" y2="209.8376">
+                        <stop  offset="0" style="stop-color:#1C4A6B"/>
+                        <stop  offset="1" style="stop-color:#1F3663"/>
+                    </linearGradient>
+                    
+                        <line id="ln-3" fill="none" stroke="url(#SVGID_7_)" stroke-linecap="round" stroke-miterlimit="10" x1="666.72" y1="227.558" x2="702.159" y2="192.118"/>
+                    <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="749.5888" y1="232.1964" x2="790.9907" y2="232.1964">
+                        <stop  offset="0" style="stop-color:#2B6C95"/>
+                        <stop  offset="1" style="stop-color:#1F3663"/>
+                    </linearGradient>
+                    
+                        <line id="ln-4" fill="none" stroke="url(#SVGID_8_)" stroke-linecap="round" stroke-miterlimit="10" x1="750.089" y1="252.397" x2="790.491" y2="211.995"/>
+                    <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="803.8573" y1="197.7434" x2="867.3693" y2="197.7434">
+                        <stop  offset="0" style="stop-color:#2B6C95"/>
+                        <stop  offset="1" style="stop-color:#1F3663"/>
+                    </linearGradient>
+                    
+                        <line id="ln-5" fill="none" stroke="url(#SVGID_9_)" stroke-linecap="round" stroke-miterlimit="10" x1="804.357" y1="228.999" x2="866.869" y2="166.487"/>
+                </g>
+                <g id="cloud-1" filter="url(#rainy-cloud2-shadow)">
+                    <path fill="#385184" d="M885.206,153.075c-8.591,1.611-17.861,8.194-45.425,8.194c-45.105,0-71.713-23.36-77.771-27.117
+                        c-6.242-3.871-35.843-30.786-75.623-32.666c-37.367-1.765-66.763,19.51-66.763,19.51l-1.925,1.114
+                        c3.788-61.181,51.038-111.371,113.592-111.371h38.662c65.243,0,115.917,54.898,115.917,119.619v22.494L885.206,153.075z"/>
+                </g>
+                <g id="cloud-2" filter="url(#rainy-cloud1-shadow)">
+                    <path fill="#6A83B5" d="M650.87,45.124c19.955-21.224,49.031-34.385,80.87-34.385h38.662c64.844,0,114.853,53.915,115.468,118.116
+                        c0.004,0.395-0.092,1.012-0.092,1.012l0,0c0,0-75.954-10.482-117.121-47.175c-17.422-15.528-40.282-28.191-40.282-28.191
+                        s-20.226-11.813-44.747-11.455s-23.946,1.144-31.483,2.004L650.87,45.124z"/>
+                </g>
+            </g>
+        </g>
+        <g filter="url(#shadow-box)" id="snow">
+            <g clip-path="url(#snow-clip)">
+                <g>
+                    <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="1054.0728" y1="14.7081" x2="1054.0728" y2="279.5223">
+                        <stop  offset="0" style="stop-color:#30BCB2"/>
+                        <stop  offset="0.6674" style="stop-color:#60C6C4"/>
+                        <stop  offset="1" style="stop-color:#73CBCE"/>
+                    </linearGradient>
+                    <path id="snow-wrapp" fill="url(#SVGID_10_)" d="M1188.585,157.751c0,64.851-50.844,119.559-116.218,119.559h-38.739
+                        c-65.374,0-114.066-54.707-114.066-119.559v-27.755c0-64.851,48.692-119.559,114.066-119.559h38.739
+                        c65.374,0,116.218,54.707,116.218,119.559V157.751z"/>
+                </g>
+                <g id="snows" display="none">
+                    <g>
+                        <path fill="#EFF8F6" d="M1045.473,34.697c3.869,0,3.869-6,0-6C1041.604,28.697,1041.604,34.697,1045.473,34.697L1045.473,34.697z
+                            "/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1008.348,71.284c3.869,0,3.869-6,0-6C1004.478,65.284,1004.478,71.284,1008.348,71.284L1008.348,71.284z
+                            "/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1062.421,102.491c3.869,0,3.869-6,0-6S1058.552,102.491,1062.421,102.491L1062.421,102.491z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M999.201,120.573c2.902,0,2.902-4.5,0-4.5S996.299,120.573,999.201,120.573L999.201,120.573z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M945.665,124.339c2.902,0,2.902-4.5,0-4.5S942.763,124.339,945.665,124.339L945.665,124.339z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1148.509,165.5c2.902,0,2.902-4.5,0-4.5C1145.607,161,1145.607,165.5,1148.509,165.5L1148.509,165.5z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1154.697,115.192c2.902,0,2.902-4.5,0-4.5C1151.795,110.692,1151.795,115.192,1154.697,115.192
+                            L1154.697,115.192z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1053.275,148.608c1.935,0,1.935-3,0-3C1051.34,145.608,1051.34,148.608,1053.275,148.608
+                            L1053.275,148.608z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#77CCCA" d="M1036.057,159.369c1.935,0,1.935-3,0-3C1034.122,156.369,1034.122,159.369,1036.057,159.369
+                            L1036.057,159.369z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#FFFFFF" d="M974.451,147.801c1.935,0,1.935-3,0-3C972.516,144.801,972.516,147.801,974.451,147.801L974.451,147.801z
+                            "/>
+                    </g>
+                
+                    <g>
+                        <path fill="#FFFFFF" d="M1036.595,117.94c1.935,0,1.935-3,0-3S1034.661,117.94,1036.595,117.94L1036.595,117.94z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#FFFFFF" d="M1112.729,74.839c2.902,0,2.902-4.5,0-4.5C1109.827,70.339,1109.827,74.839,1112.729,74.839
+                            L1112.729,74.839z"/>
+                    </g>
+                
+                    <g>
+                        <path fill="#FFFFFF" d="M962.344,92.594c2.902,0,2.902-4.5,0-4.5S959.443,92.594,962.344,92.594L962.344,92.594z"/>
+                    </g>
+                </g>
+                <path id="back-mountain" fill="#A8DDE0" d="M1170.052,222.898c-20.557,32.367-56.022,54.149-97.273,54.149h-38.739
+                    c-45.647,0-83.161-26.672-101.644-64.846l1.501-0.93c0,0,59.454-40.354,97.387-39.547c37.932,0.807,70.484,20.715,88.24,31.207
+                    c17.756,10.492,36.816,16.667,50.825,19.498L1170.052,222.898z"/>
+                <g id="tree" display="none">
+                    <rect x="1096.213" y="172.971" fill="#43BFB0" width="12.375" height="22.146"/>
+                    <g id="bottom-tree">
+                        <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="1102.4009" y1="118.5175" x2="1102.4009" y2="177.8693">
+                            <stop  offset="0" style="stop-color:#43BFB0"/>
+                            <stop  offset="0.1316" style="stop-color:#6DC8BC"/>
+                            <stop  offset="0.4159" style="stop-color:#BCE3DD"/>
+                            <stop  offset="0.6441" style="stop-color:#FFFFFF"/>
+                        </linearGradient>
+                        <path fill="url(#SVGID_12_)" d="M1101.821,117.56l31.993,52.394c0,0-18.547,7.419-31.993,7.419
+                        c-13.446,0-30.834-7.882-30.834-7.882L1101.821,117.56z"/>
+                    </g>
+                    <g id="middle-tree">
+                        <linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="1102.4009" y1="103.7715" x2="1102.4009" y2="149.6911">
+                            <stop  offset="0" style="stop-color:#43BFB0"/>
+                            <stop  offset="0.1316" style="stop-color:#6DC8BC"/>
+                            <stop  offset="0.4159" style="stop-color:#BCE3DD"/>
+                            <stop  offset="0.6441" style="stop-color:#FFFFFF"/>
+                        </linearGradient>
+                        <path fill="url(#SVGID_13_)" d="M1101.953,103.031l24.752,40.537c0,0-14.349,5.74-24.752,5.74s-23.856-6.098-23.856-6.098
+                            L1101.953,103.031z"/>
+                    </g>
+                    <g id="top-tree">
+                        <path fill="#FFFFFF" d="M1102.044,87.159l19.714,32.285c0,0-11.428,4.571-19.714,4.571s-19-4.857-19-4.857L1102.044,87.159z"/>
+                    </g>
+                </g>
+                <g id="middle-mountain">
+                    <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="1035.1641" y1="263.8484" x2="1035.1641" y2="185.8382">
+                        <stop  offset="0" style="stop-color:#A9DCD5"/>
+                        <stop  offset="0.6608" style="stop-color:#CFEBE8"/>
+                        <stop  offset="1" style="stop-color:#E5F4F2"/>
+                    </linearGradient>
+                    <path fill="url(#SVGID_11_)" d="M1150.392,246.25c-20.455,19.13-47.678,30.926-78.034,30.926h-38.739
+                        c-62.007,0-109.005-49.216-113.683-109.623l0,0c0,0,4.303-2.848,21.341-2.56c15.625,0.265,43.537,5.694,62.189,15.603
+                        c18.222,9.68,26.23,16.276,39.681,24.616c13.451,8.34,44.752,27.613,85.953,37.125
+                        C1147.873,246.671,1150.392,246.25,1150.392,246.25L1150.392,246.25z"/>
+                </g>
+                <g id="front-mountain">
+                    <g filter="url(#snow-shadow)">
+                        <path fill="#EFF8F6" d="M1094.779,275.458c-7.194,1.427-14.646,2.176-22.296,2.176h-38.74c-50.86,0-91.623-33.112-107.216-78.352
+                            l2.525,1.187c42.237,16.814,57.84,19.773,80.573,20.042c14.771,0.175,21.382,0,36.911-5.085L1094.779,275.458z"/>
+                    </g>
+                    <path fill="#EFF8F6" d="M929.086,200.51c42.237,16.814,57.84,19.773,80.573,20.042s55.006-9.01,70.215-17.621
+                        c14.899-8.436,46.003-25.557,72.502-25.557c15.603,0,31.476,5.784,31.476,5.784l2.105,0.966
+                        c-11.449,52.827-57.036,93.551-113.44,93.551h-38.739c-50.86,0-91.623-33.112-107.216-78.352L929.086,200.51z"/>
+                </g>
+                
+            </g>
+        </g>
+    </svg>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTime("sunset-shadow", 3500);
+            setTime("fire-light", 3000);
+            setTime("rains", 3500);
+            setTime("tree", 3600);
+            setTime("snows", 6000)
+        }
+
+        function setTime(ele, interval) {
+            setTimeout(function() {
+                document.getElementById(ele).style.display = "block";
+            }, interval)
+        }
+    </script>
+</body>
+
+</html>

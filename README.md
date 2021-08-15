@@ -2,27 +2,45 @@
 
 ## 杂七杂八
 
-### 1. CSS渐变背景（Css gradient background）
+<details><summary><b>1. CSS渐变背景（Css gradient background）</b></summary>
+<p>
 
 ![](./assets/css渐变背景1.png)
 
 ![](./assets/css渐变背景.png)
 
-### 2. 夜空(Night Sky)
+</p>
+</details>
+
+<details><summary><b>2. 夜空(Night Sky)</b></summary>
+<p>
 
 ![](./assets/夜空.png)
 
-### 3. 水波(sea-wave)
+</p>
+</details>
+
+<details><summary><b>3. 水波(sea-wave)</b></summary>
+<p>
 
 ![](./assets/水波.png)
 
-### 4. 四季图标(360-weather)
+</p>
+</details>
+
+<details><summary><b>4. 四季图标(360-weather)</b></summary>
+<p>
 
 ![](./assets/四季图标.png)
 
+</p>
+</details>
+
+
 ## 面试
 
-### 西安葡萄城
+<details><summary><b>### 西安葡萄城</b></summary>
+<p>
 
 - 一面
 
@@ -252,7 +270,11 @@ console.log(renderMap(data));
 
 ```
 
-### 腾讯云
+</p>
+</details>
+
+<details><summary><b>### 腾讯云</b></summary>
+<p>
 
 - 一面
 
@@ -461,3 +483,6 @@ const getUrlData = (url) =>{
 console.log(getUrlData("https://ss-subs.paofusub.com/sub?target=clash"));
 
 ```
+
+</p>
+</details>

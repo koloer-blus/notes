@@ -486,3 +486,22 @@ console.log(getUrlData("https://ss-subs.paofusub.com/sub?target=clash"));
 
 </p>
 </details>
+
+<details><summary><b>### 网易雷火</b></summary>
+<p>
+- 一面
+
+1. 自我介绍
+2. 说说在项目中用的cookie，cookie的作用以及属性
+3. react再卸载时用的哪个生命周期？在hooks中如何在卸载时做这个操作
+4. css选择器的优先级，兄弟选择器和子类选择器知道吗？
+5. vue的双向绑定原理？怎么实现的？vue2.x和3.x在这块有什么区别？
+6. 前端如何异步上传文件？具体使用什么上传？
+7. 前端瀑布流了解吗？怎么实现的？
+8. 前端的页面如何做适配？有哪些方案？（这里忘记说直接写两套）
+9. 前端跨域了解吗？有哪些方案？cors具体是什么？
+10. 配置过webpack吗？静态资源配置了解吗？有配置过图片划分处理吗？
+11. webpack图片压缩你怎么做？
+（本次面试没有代码）
+</p>
+</details>

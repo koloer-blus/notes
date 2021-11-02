@@ -13,4 +13,4 @@
 
 1. [协同编程冲突处理算法](https://mp.weixin.qq.com/s/3aOdbtCtSf-8YACeowbASA)
 2. [NodeJS底层原理详解](https://mp.weixin.qq.com/s/ognHGg6ptHmvWOWb9B4bPw)
-3. [《V8 引擎 Lazy Parsing》-- 转载](./文章笔记/V8引擎 《LazyParsing》-- 转载.md)
+3. [V8引擎Lazy Parsin--转载](./文章笔记/V8引擎LazyParsing--转载.md)

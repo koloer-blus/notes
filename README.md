@@ -12,6 +12,11 @@
 ## JavaScript
 
 1. [EventLoop 理解](./interview/EventLoop详解.md)
+2. [前端模块化](./interview/前端模块化.md)
+
+## Http
+
+1. [浏览器输入URL网址发生的事情](./interview/浏览器输入URL网址发生的事情.md)
 
 ## 拓展阅读
 

@@ -24,3 +24,5 @@
 2. [NodeJS底层原理详解](https://mp.weixin.qq.com/s/ognHGg6ptHmvWOWb9B4bPw)
 3. [V8引擎Lazy Parsin--转载](./文章笔记/V8引擎LazyParsing--转载.md)
 4. [正交的React组件](https://github.com/ascoders/weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/132.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%AD%A3%E4%BA%A4%E7%9A%84%20React%20%E7%BB%84%E4%BB%B6%E3%80%8B.md)
+5. [如何优雅地在 React 中使用TypeScript](https://mp.weixin.qq.com/s/PocFztitL68f1pwJqCVbiA)
+6. [前端大管家 package.json](https://mp.weixin.qq.com/s/eJCefZzpsrNZnT8rUXT39A)

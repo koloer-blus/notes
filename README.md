@@ -26,4 +26,4 @@
 4. [正交的React组件](https://github.com/ascoders/weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/132.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%AD%A3%E4%BA%A4%E7%9A%84%20React%20%E7%BB%84%E4%BB%B6%E3%80%8B.md)
 5. [如何优雅地在 React 中使用TypeScript](https://mp.weixin.qq.com/s/PocFztitL68f1pwJqCVbiA)
 6. [前端大管家 package.json](https://mp.weixin.qq.com/s/eJCefZzpsrNZnT8rUXT39A)
-7. [Babel了解](https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg)
+7. [AST、Babel、依赖](https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg)

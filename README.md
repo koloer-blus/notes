@@ -28,3 +28,4 @@
 5. [如何优雅地在 React 中使用TypeScript](https://mp.weixin.qq.com/s/PocFztitL68f1pwJqCVbiA)
 6. [前端大管家 package.json](https://mp.weixin.qq.com/s/eJCefZzpsrNZnT8rUXT39A)
 7. [AST、Babel、依赖](https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg)
+8. [函数式组件与类组件有何不同？](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/) 

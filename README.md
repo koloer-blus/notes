@@ -13,6 +13,7 @@
 4. [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
 5. [正交的React组件](https://github.com/ascoders/weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/132.%E7%B2%BE%E8%AF%BB%E3%80%8A%E6%AD%A3%E4%BA%A4%E7%9A%84%20React%20%E7%BB%84%E4%BB%B6%E3%80%8B.md)
 6. [如何优雅地在 React 中使用TypeScript](https://mp.weixin.qq.com/s/PocFztitL68f1pwJqCVbiA)
+7. [编写有弹性的组件](https://overreacted.io/zh-hans/writing-resilient-components/)
 
 ## JavaScript
 
@@ -22,6 +23,10 @@
 ## Http
 
 1. [浏览器输入URL网址发生的事情](./interview/浏览器输入URL网址发生的事情.md)
+
+## Css
+
+1. [Splicing HTML’s DNA With CSS Attribute Selectors](https://www.smashingmagazine.com/2018/10/attribute-selectors-splicing-html-dna-css/)
 
 ## 拓展阅读
 

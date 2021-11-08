@@ -29,3 +29,4 @@
 6. [前端大管家 package.json](https://mp.weixin.qq.com/s/eJCefZzpsrNZnT8rUXT39A)
 7. [AST、Babel、依赖](https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg)
 8. [函数式组件与类组件有何不同？](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/) 
+9. [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)

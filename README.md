@@ -27,6 +27,7 @@
 ## Css
 
 1. [Splicing HTML’s DNA With CSS Attribute Selectors](https://www.smashingmagazine.com/2018/10/attribute-selectors-splicing-html-dna-css/)
+2. [ICSS](https://github.com/css-modules/icss)
 
 ## 拓展阅读
 

@@ -28,6 +28,7 @@
 
 1. [Splicing HTML’s DNA With CSS Attribute Selectors](https://www.smashingmagazine.com/2018/10/attribute-selectors-splicing-html-dna-css/)
 2. [ICSS](https://github.com/css-modules/icss)
+3. [CSS Modules 用法教程](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)
 
 ## 拓展阅读
 

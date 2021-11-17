@@ -42,6 +42,7 @@
 5. [AST、Babel、依赖](https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg)
 6. [编写高质量可维护的代码：组件的抽象与粒度](https://mp.weixin.qq.com/s/6U8zMpnBk9nBI_bQAobdfw)
 7. [Continuous integration vs. continuous delivery vs. continuous deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+8. [How to Make Good Code Reviews Better](https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/)
 
 ## Books
 

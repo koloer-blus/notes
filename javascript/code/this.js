@@ -18,3 +18,58 @@ function _New(func) {
   }
   return res;
 }
+
+/**
+ * call: 
+ * 1. 将函数设置为对象的属性
+ * 2. 执行 & 删除这个函数
+ * 3. 指定`this`到函数并传入给定的参数执行函数
+ * 4. 如果不传参数，默认指向`window`
+ * @param {any} context 
+ */
+Function.prototype._call = function(context = window) {
+  context.fn = this;
+  const args = [...arguments].slice(1);
+  const result = context.fn(...args);
+  delete context.fn;
+  return result;
+}
+
+/**
+ * apply
+ * @param {any} context 
+ */
+Function.prototype._apply = function(context = window) {
+  context.fn = this;
+  let res = null;
+  if (arguments[1]) {
+    res = context.fn(arguments[1]);
+  } else {
+    res = context.fn();
+  }
+  delete context;
+  return res;
+}
+
+/**
+ * bind: 
+ * 1. 创建一个全新的函数
+ * 2. 新函数调用时传入`bind`第一个参数作为运行的`this`
+ * 3. 之后的参数作为传递的实参之前的参数
+ * @param {any} context 
+ */
+Function.prototype._bind = function(context) {
+  if (typeof this !== 'function') {
+    throw Error(`${this} is not a function`);
+  }
+
+  const fn = this;
+  const args = [...arguments].slice(1);
+  const resF = function() {
+    return fn.apply(this instanceof resF ? this: context, args.concat(...arguments));
+  }
+  function tmp() {}
+  tmp.prototype = this.prototype;
+  resF.prototype = new tmp();
+  return resF;
+}

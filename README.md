@@ -22,6 +22,8 @@
 
 1. [EventLoop 理解](./interview/EventLoop详解.md)
 2. [前端模块化](./interview/前端模块化.md)
+3. [JS 继承](./javascript/code/extends.js)
+4. [JS 判断类型](./javascript/code/js-type.js)
 
 ## Http
 

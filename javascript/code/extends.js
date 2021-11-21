@@ -91,7 +91,7 @@ camp6.add(4, 6);
 console.log('原型继承');
 
 function object(o) {
-  function F() {};
+  function F() { };
   F.prototype = o;
   return new F();
 }
@@ -115,14 +115,43 @@ console.log(camp8.icons);
  * 1. 为对象添加函数会不能函数复用降低效率
  */
 console.log('寄生继承');
-function MathLib5  (o) {
+function MathLib5(o) {
   const clone = object(o);
-  clone.console = function() {
+  clone.console = function () {
     console.log('clone', clone);
   }
   return clone;
 }
 
-const camp9 = MathLib5(new MathCamp());
+const camp9 = new MathLib5(new MathCamp());
 
 console.log(camp9.icons);
+
+
+/**
+ * 寄生组合继承
+ */
+
+console.log('寄生组合继承');
+
+function extend(subClass, superClass) {
+  const F = function () { };
+  F.prototype = superClass.prototype;
+  subClass.prototype = new F();
+  subClass.prototype.constructor = subClass;
+  subClass.superClass = superClass.prototype;
+  if (superClass.prototype.constructor == Object.prototype.constructor) {
+    superClass.prototype.constructor = superClass;
+  }
+}
+
+function MathLib6() {
+  this.console = console.log;
+  MathCamp.call(this);
+};
+
+extend(MathLib6, MathCamp);
+
+const camp10 = new MathLib6();
+
+console.log(camp10.icons, camp10);

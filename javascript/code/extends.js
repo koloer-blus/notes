@@ -106,3 +106,23 @@ console.log(camp7.icons);
 
 const camp8 = Object.create(MathLib4);
 console.log(camp8.icons);
+
+
+/**
+ * 寄生式继承
+ * 
+ * 缺点：
+ * 1. 为对象添加函数会不能函数复用降低效率
+ */
+console.log('寄生继承');
+function MathLib5  (o) {
+  const clone = object(o);
+  clone.console = function() {
+    console.log('clone', clone);
+  }
+  return clone;
+}
+
+const camp9 = MathLib5(new MathCamp());
+
+console.log(camp9.icons);

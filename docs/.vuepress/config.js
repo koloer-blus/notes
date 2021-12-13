@@ -1,3 +1,3 @@
 module.exports = {
-  base: "/notes/"
+  base: "./notes/"
 }

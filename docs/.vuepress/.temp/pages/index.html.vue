@@ -4,12 +4,12 @@
 </blockquote>
 <h2 id="读书笔记" tabindex="-1"><a class="header-anchor" href="#读书笔记" aria-hidden="true">#</a> 读书笔记</h2>
 <ol>
-<li><RouterLink to="/%E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/Css%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E5%9B%BE%E5%BD%A2.html">Css实现简单形状</RouterLink></li>
-<li><RouterLink to="/%E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/Vim%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">Vim 实操手册</RouterLink></li>
+<li><RouterLink to="/E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/Css%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E5%9B%BE%E5%BD%A2.html">Css实现简单形状</RouterLink></li>
+<li><RouterLink to="/E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/Vim%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">Vim 实操手册</RouterLink></li>
 </ol>
 <h2 id="react" tabindex="-1"><a class="header-anchor" href="#react" aria-hidden="true">#</a> React</h2>
 <ol>
-<li><RouterLink to="/React/React%20Concurrent%20Mode.html">React Concurrent Mode</RouterLink></li>
+<li><RouterLink to="/eact/React%20Concurrent%20Mode.html">React Concurrent Mode</RouterLink></li>
 <li><a href="https://github.com/baiziyu-fe/messy-notes/issues/4" target="_blank" rel="noopener noreferrer">监听元素进入视口比例后执行函数<OutboundLink/></a></li>
 <li><a href="https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/" target="_blank" rel="noopener noreferrer">函数式组件与类组件有何不同？<OutboundLink/></a></li>
 <li><a href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/" target="_blank" rel="noopener noreferrer">useEffect 完整指南<OutboundLink/></a></li>
@@ -20,14 +20,14 @@
 </ol>
 <h2 id="javascript" tabindex="-1"><a class="header-anchor" href="#javascript" aria-hidden="true">#</a> JavaScript</h2>
 <ol>
-<li><RouterLink to="/interview/EventLoop%E8%AF%A6%E8%A7%A3.html">EventLoop 理解</RouterLink></li>
-<li><RouterLink to="/interview/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96.html">前端模块化</RouterLink></li>
+<li><RouterLink to="/nterview/EventLoop%E8%AF%A6%E8%A7%A3.html">EventLoop 理解</RouterLink></li>
+<li><RouterLink to="/nterview/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96.html">前端模块化</RouterLink></li>
 <li><a href="./javascript/code/extends.js">JS 继承</a></li>
 <li><a href="./javascript/code/js-type.js">JS 判断类型</a></li>
 </ol>
 <h2 id="http" tabindex="-1"><a class="header-anchor" href="#http" aria-hidden="true">#</a> Http</h2>
 <ol>
-<li><RouterLink to="/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5URL%E7%BD%91%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E6%83%85.html">浏览器输入URL网址发生的事情</RouterLink></li>
+<li><RouterLink to="/nterview/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5URL%E7%BD%91%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E6%83%85.html">浏览器输入URL网址发生的事情</RouterLink></li>
 </ol>
 <h2 id="css" tabindex="-1"><a class="header-anchor" href="#css" aria-hidden="true">#</a> Css</h2>
 <ol>
@@ -40,7 +40,7 @@
 <ol>
 <li><a href="https://mp.weixin.qq.com/s/3aOdbtCtSf-8YACeowbASA" target="_blank" rel="noopener noreferrer">协同编程冲突处理算法<OutboundLink/></a></li>
 <li><a href="https://mp.weixin.qq.com/s/ognHGg6ptHmvWOWb9B4bPw" target="_blank" rel="noopener noreferrer">NodeJS底层原理详解<OutboundLink/></a></li>
-<li><RouterLink to="/%E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/V8%E5%BC%95%E6%93%8ELazyParsing--%E8%BD%AC%E8%BD%BD.html">V8引擎Lazy Parsin--转载</RouterLink></li>
+<li><RouterLink to="/E6%96%87%E7%AB%A0%E7%AC%94%E8%AE%B0/V8%E5%BC%95%E6%93%8ELazyParsing--%E8%BD%AC%E8%BD%BD.html">V8引擎Lazy Parsin--转载</RouterLink></li>
 <li><a href="https://mp.weixin.qq.com/s/eJCefZzpsrNZnT8rUXT39A" target="_blank" rel="noopener noreferrer">前端大管家 package.json<OutboundLink/></a></li>
 <li><a href="https://mp.weixin.qq.com/s/PX3fhUTUwKDbtd2-pq9Rxg" target="_blank" rel="noopener noreferrer">AST、Babel、依赖<OutboundLink/></a></li>
 <li><a href="https://mp.weixin.qq.com/s/6U8zMpnBk9nBI_bQAobdfw" target="_blank" rel="noopener noreferrer">编写高质量可维护的代码：组件的抽象与粒度<OutboundLink/></a></li>

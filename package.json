@@ -1,0 +1,15 @@
+{
+    "name": "baiziyu-fe-notes",
+    "version": "1.0.0",
+    "description": "baiziyu-fe study notes",
+    "main": "index.js",
+    "author": "baiziyu-fe <77950278+baiziyu-fe@users.noreply.github.com>",
+    "license": "MIT",
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress": "^2.0.0-beta.27"
+    }
+}

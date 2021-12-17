@@ -1,15 +1,48 @@
 {
-    "name": "baiziyu-fe-notes",
+    "name": "notes",
     "version": "1.0.0",
-    "description": "baiziyu-fe study notes",
-    "main": "index.js",
-    "author": "baiziyu-fe <77950278+baiziyu-fe@users.noreply.github.com>",
-    "license": "MIT",
-    "scripts": {
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs"
+    "description": "",
+    "main": "./bin/index.js",
+    "bin": {
+        "react-press": "./bin/index.js"
+    },
+    "directories": {
+        "doc": "docs"
+    },
+    "dependencies": {
+        "commander": "^8.3.0",
+        "fs-extra": "^10.0.0",
+        "highlight.js": "^11.3.1",
+        "less": "^4.1.2",
+        "marked": "^4.0.7",
+        "mdurl": "^1.0.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-markdown": "^7.1.1",
+        "react-router-dom": "^6.1.1",
+        "react-syntax-highlighter": "^15.4.5",
+        "rehype-raw": "^6.1.0",
+        "remark-gfm": "^3.0.1"
     },
     "devDependencies": {
-        "vuepress": "^2.0.0-beta.27"
-    }
+        "@vitejs/plugin-react": "^1.0.7",
+        "vite": "^2.7.2"
+    },
+    "scripts": {
+        "md:build": "node ./bin/index.js",
+        "docs:dev": "npm run md:build && vite",
+        "docs:build": "npm run md:build && vite build",
+        "docs:preview": "npm run docs:build && vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/baiziyu-fe/notes"
+    },
+    "keywords": [],
+    "author": "baiziyu-fe",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/baiziyu-fe/notes/issues"
+    },
+    "homepage": "https://baiziyu-fe.github.io/notes/"
 }

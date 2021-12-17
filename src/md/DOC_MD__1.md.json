@@ -1,0 +1,1 @@
+{"content":"## 转移仓库的Commit\n\n```\ngit remote -v\n// 删除原本的远程repo\ngit remote rm origin\n// 添加新的远程repo\ngit remote add origin ssh://username@xxx.xxx.xxx/new/repo\ngit push -u origin --all\ngit push -u origin --tags\n```\n","title":"README"}

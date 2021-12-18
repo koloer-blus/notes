@@ -1,6 +1,6 @@
 ## 转移仓库的Commit
 
-```
+```shell
 git remote -v
 // 删除原本的远程repo
 git remote rm origin

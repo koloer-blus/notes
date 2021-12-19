@@ -4,10 +4,7 @@
     "description": "",
     "main": "./bin/index.js",
     "bin": {
-        "react-press": "./bin/index.js"
-    },
-    "directories": {
-        "doc": "docs"
+        "notes": "./bin/index.js"
     },
     "dependencies": {
         "commander": "^8.3.0",
@@ -36,13 +33,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/baiziyu-fe/notes"
+        "url": "git+https://github.com/baiziyu-fe/ReactPress.git"
     },
     "keywords": [],
     "author": "baiziyu-fe",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/baiziyu-fe/notes/issues"
+        "url": "https://github.com/baiziyu-fe/ReactPress/issues"
     },
-    "homepage": "https://baiziyu-fe.github.io/notes/"
+    "homepage": "https://github.com/baiziyu-fe/ReactPress#readme"
 }

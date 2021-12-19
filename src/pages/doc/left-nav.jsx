@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { marked } from 'marked';
-import docStyle from './doc.module.less';
+import docStyle from './style/doc.module.less';
 
 const LeftNav = (props) => {
   const { content } = props;
@@ -19,18 +19,19 @@ const LeftNav = (props) => {
   React.useEffect(() => {
     const tempList = []
     const renderer = new marked.Renderer()
-    renderer.heading = function (text, level) {
+    renderer.heading = function (_, level, raw) {
       return tempList.push({
         level,
-        text
+        text: raw
       });
     }
     marked(content, { renderer: renderer });
     setNavList(tempList.filter(nav => nav.level === 2));
-  }, [content])
+  }, [content]);
+
   return (
     <div
-      className={docStyle['left-nav']}
+      className={docStyle["left-nav"]}
       onClick={(e) => {
         scrollToAnchor(e.target.name);
       }}
@@ -39,8 +40,8 @@ const LeftNav = (props) => {
         navList.map(nav => {
           return (
             <div
+              className={docStyle["article-nav"]}
               key={nav.text}
-              className={docStyle['nav-link']}
             >
               <a name={nav.text}>{nav.text}</a>
             </div>

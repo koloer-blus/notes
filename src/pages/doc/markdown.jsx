@@ -3,20 +3,20 @@ import ReactMarkdown from 'react-markdown';
 
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { Link } from 'react-router-dom';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atelierDuneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import "style/theme.css";
-import docStyle from './doc.module.less';
+import docStyle from './style/doc.module.less';
+import "./style/md.less"
 
 import routes from '@/route.config.json';
-import { Link } from 'react-router-dom';
 
 const MarkDown = (props) => {
   const { content } = props;
 
   return (
     <ReactMarkdown
-      className={docStyle["md-doc-view"]}
+      className={`md-view ${docStyle["md-docs"]}`}
       children={content || ''}
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
@@ -36,19 +36,20 @@ const MarkDown = (props) => {
           return <a {...props} href={href} target="_blank">{children}</a>
         },
         code({ node, inline, className, children, ...props }) {
-          const match = /language-(\w+)/.exec(className || '');
-          return !inline && match ? (
+          const match = /language-(\w+)/.exec(className || '') ?? [];
+          return !inline ? (
             <SyntaxHighlighter
               style={atelierDuneLight}
               language={match[1]}
               PreTag="div"
+              className={`${className} block-code`}
               showLineNumbers
               {...props}
             >
               {String(children).replace(/\n$/, '')}
             </SyntaxHighlighter>
           ) : (
-              <code className={className} {...props}>
+              <code className={`${className} line-code`} {...props}>
                 {children}
               </code>
             )

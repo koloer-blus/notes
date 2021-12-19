@@ -4,7 +4,7 @@ import useDocumentTitle from 'hooks/useDocumentTitle'
 import MarkDown from './markdown';
 import LeftNav from './left-nav';
 import mdData from '@/registry';
-import docStyle from './doc.module.less';
+import docStyle from './style/doc.module.less';
 
 const Doc = (props) => {
   const { pageKey } = props;

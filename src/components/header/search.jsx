@@ -7,6 +7,7 @@ const Search = () => {
   const [result, setResult] = React.useState(pages);
   const [visible, setVisible] = React.useState(false);
   const inputRef = React.useRef();
+  const resRef = React.useRef();
   const search = () => {
     setVisible(true)
     const value = inputRef.current.value.toLowerCase().trim();
@@ -18,6 +19,19 @@ const Search = () => {
       setResult(temp);
     } else {
       setResult(pages)
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener('click', handleSearchResVisible);
+    return () => document.removeEventListener('click', handleSearchResVisible);
+  }, []);
+
+  const handleSearchResVisible = (e) => {
+    if (!resRef.current) return;
+    if (inputRef.current.contains(e.target)) return;
+    if(!resRef.current.contains(e.target)) {
+      setVisible(false);
     }
   }
 
@@ -37,9 +51,8 @@ const Search = () => {
       {
         visible && (
           <div
+            ref={resRef}
             className={headerStyle["doc-search-result"]}
-            onClick={() => setVisible(false)}
-            onBlur={() => setVisible(false)}
           >
             <div className={headerStyle["split-box"]}>
               {

@@ -22,7 +22,11 @@ const MarkDown = (props) => {
       rehypePlugins={[rehypeRaw]}
       components={{
         h2({ node, children, ...props }) {
-          return <h2 id={children} {...props}>{children}</h2>
+          const hId = children.map(el => {
+            if (typeof el === 'string') return el;
+            return el.props.children.join('');
+          }).join('');
+          return <h2 id={hId} {...props}>{children}</h2>
         },
         a({ node, children, href, ...props }) {
           if (href[0] === '.') {

@@ -28,6 +28,9 @@ const MarkDown = (props) => {
           }).join('');
           return <h2 id={hId} {...props}>{children}</h2>
         },
+        img({ node, ...props }) {
+          return <img className="picture" {...props}></img>
+        },
         a({ node, children, href, ...props }) {
           if (href[0] === '.') {
             const res = routes.pages.find(page => {

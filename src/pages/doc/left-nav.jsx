@@ -22,7 +22,7 @@ const LeftNav = (props) => {
     renderer.heading = function (_, level, raw) {
       return tempList.push({
         level,
-        text: raw
+        text:raw
       });
     }
     marked(content, { renderer: renderer });
@@ -37,11 +37,11 @@ const LeftNav = (props) => {
       }}
     >
       {
-        navList.map(nav => {
+        navList.map((nav,index) => {
           return (
             <div
               className={docStyle["article-nav"]}
-              key={nav.text}
+              key={`${nav.text}-${index}`}
             >
               <a name={nav.text}>{nav.text}</a>
             </div>

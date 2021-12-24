@@ -12,7 +12,7 @@ const Search = () => {
     setVisible(true)
     const value = inputRef.current.value.toLowerCase().trim();
     if (value) {
-      const temp = result.filter(page => {
+      const temp = pages.filter(page => {
         const filePath = page.filePath.toLowerCase();
         return filePath.includes(value);
       });
@@ -62,9 +62,19 @@ const Search = () => {
             <ol>
               {
                 result.map(item => {
+                  let name = item.filePath.substring(item.filePath.lastIndexOf("/") + 1, item.filePath.lastIndexOf('.md'));
+                  const pathList = item.filePath.split("/");
+                  if (name.toUpperCase() === 'README') {
+                    if (pathList.length <= 2) {
+                      name = '首页';
+                    } else {
+                      name = pathList[pathList.length - 2];
+                    }
+                  }
+                  
                   return (
                     <li key={item.md_key}>
-                      <Link to={item.path}>{item.filePath}</Link>
+                      <Link to={item.path}>{name}</Link>
                     </li>
                   )
                 })

@@ -7,9 +7,9 @@ const Effect: React.FC = () => {
     document.title = value;
     console.log('[no dep] value is ', value);
   });
-  React.useEffect(() => {
+  myUseEffect(() => {
     console.log('react');
-  }, 'tetsts')
+  }, [])
 
   myUseEffect(() => {
     console.log('[dep value] value is ', value);

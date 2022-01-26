@@ -11,6 +11,10 @@
 1. [React Router](./React-Router.md)
 2. [`hooks`--useEffect](./React-[hooks]--useEffect.md)
 
+## 🥇Javascript相关
+
+1. [JS-为什么不用for而用forEach](./JS-为什么不用for而用forEach.md)
+
 ## 📔`Git` 相关
 
 1. [Git 使用手册](./GIT-奇技淫巧.md)

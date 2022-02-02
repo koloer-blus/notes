@@ -13,3 +13,23 @@ git remote add origin ssh://username@xxx.xxx.xxx/new/repo
 git push -u origin --all
 git push -u origin --tags
 ```
+
+## `revert` 与 `reset`区别
+
+### revert
+
+> revert的原理是，在当前提交后面，新增一次提交，抵消掉上一次提交导致的所有变化。它不会改变过去的历史，所以是首选方式，没有任何丢失代码的风险
+
+`revert`提供一种相对柔和的方式，但是如果已经提交了多次代码，想要恢复之前的状态，那么这里就需要注意在使用了`revert`后需要进行工作区的代码合并和处理，避免代码的遗漏。
+
+使用revert之前revert的commit号。一般我们在revert后会生成一个专属的revert分支，于是又新增了一个commit，把之前revert的代码又重新revert回来了。
+
+### reset
+
+> `reset`的作用是当你希望提交的`commit`从历史记录中完全消失就可以用
+
+那么 `reset` 一般是什么时候用呢？在大多数的开发场景下，不要用，要用也是临时修改不想提交的信息，然后使用`git reset --hard`命令，但是这个命令也可能会让你的一天努力白费。
+
+> 参考：
+>
+> [如果你还不会用 git 回滚代码，那你一定要来看看](https://mp.weixin.qq.com/s/vQ25Ewe6u30arKsW2EDCMw)

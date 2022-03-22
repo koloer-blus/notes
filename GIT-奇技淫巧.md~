@@ -11,7 +11,6 @@ git remote add origin ssh://username@xxx.xxx.xxx/new/repo
 git push -u origin --all
 git push -u origin --tags
 ```
-
 ## ADD
 
 ### 选择需要提交的内容
@@ -59,57 +58,17 @@ git commit --amend
 
 ## 意外执行了`hard reset`，如何恢复代码
 
-```shell
+···shell
 git reflog
-```
+···
 
 
 ## 分支Branch
 
 ### 从错误的分支拉取了内容需要去除这部分内容
-
 ```shell
-git reflog
-
-git reset --hard HEAD
-```
-
-### 挑选部分的commit到我新的分支
-
-```shell
-git cherry-pick Head
-```
-
-### 从别人正在开发的分支迁出一个分支
-
-```shell
-git fetch -all
-
-git checkout --track origin/daves
-```
-
-## Rebase & Merge
-
-### 已经rebase不使用--force强推代码
 
 ```
-git rebase -i main
-git checkout main
-git merge --ff-only mybranch
-```
-
-### 组合提交内容
-
-```
-git rebase -i main
-```
-
-### 安全合并策略
-
-```
-git merge --no-ff --no-commit mybranch
-```
-
 
 
 > 参考：

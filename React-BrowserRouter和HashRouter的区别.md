@@ -63,8 +63,6 @@
 
 >  使用 URL 的 `hash` 部分（即 `window.location.hash`）来保持 UI 和 URL 的同步。
 
-
-
 > 注意事项`Hash Router`不支持`location.key`或`location.state`。
 
 

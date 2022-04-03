@@ -8,6 +8,8 @@
 
 ### 执行时机
 
+`useEffect`在浏览器的重回之后异步执行。
+
 > 与 `componentDidMount`、`componentDidUpdate` 不同的是，传给 `useEffect` 的函数会在浏览器完成布局与绘制**之后**，在一个延迟事件中被调用。
 >
 > 然而，并非所有 effect 都可以被延迟执行。对于需要同步执行的`hooks`我们需要使用`useLayoutEffect`。

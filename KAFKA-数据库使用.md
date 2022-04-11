@@ -74,7 +74,7 @@
    # 创建topic测试主题kafka，成功不关闭页面
    .\bin\windows\kafka-topics.bat –create –zookeeper localhost:2181 –replication-factor 1 –partitions 1 –topic test
    
-   #创建生产者产生消息，不关闭页面
+   [[创建生产者产生消息，不关闭页面]]
    .\bin\windows\kafka-console-producer.bat –broker-list localhost:9092 –topic test
    
    # 创建消费者接收消息，不关闭页面

@@ -18,7 +18,7 @@
 ### 特点
 
 1. 通过监听`histroy.pushState()`方法改变地址栏
-   - `pushState`在最终效果上等同于`window.location = #routePath`，在效果上他们都会在当前的`document`中创建和激活一个新的历史记录，但是`pushState`带来了更好的效果和更少的限制：
+   - `pushState`在最终效果上等同于`window.location = [[routePath]]`，在效果上他们都会在当前的`document`中创建和激活一个新的历史记录，但是`pushState`带来了更好的效果和更少的限制：
      - `window.location`在设置时只有设置锚(`#`)的时候才会是当前的URL；**`pushState`可以设置为任何当前URL同源的URL**。
      - 非强制修改URL。相反，设置 `window.location = "#foo";` 仅仅会在锚的值不是#foo情况下创建一条新的历史记录。
      - 可以在新的历史记录中关联任何数据。`window.location = "#foo"`形式的操作，你只可以将所需数据写入锚的字符串中。

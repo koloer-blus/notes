@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "bb53bc4d24746c1b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e86fbccf95e0d4d2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "JS-如何实现深拷贝.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "79d4097fee94e6cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2c2d1544bcde35b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "194d3fcae0d7f32e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ce511571f4b08f79",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e0aa9ce4aabdb50e",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f73a707ec56f922",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49280d5510d7be73",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "JS-如何实现深拷贝.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0c545056ff7f93f2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "JS-如何实现深拷贝.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "e86fbccf95e0d4d2",
+  "lastOpenFiles": [
+    "JS-如何实现深拷贝.md",
+    "README.md",
+    "GIT-奇技淫巧.md",
+    "JS-为什么不用for而用forEach.md",
+    "JS-null和undefined区别.md",
+    "CSS-实现简单图形.md",
+    "React-Router.md",
+    "webpack知识点分析.md",
+    "React-BrowserRouter和HashRouter的区别.md",
+    "Linux-Vim使用手册.md"
+  ]
+}

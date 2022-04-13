@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JS-事件循环机制.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS-事件循环机制.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JS-事件循环机制.md"
+                "file": "README.md"
               }
             }
           }
@@ -99,6 +99,7 @@
   },
   "active": "0c578c58a75771d5",
   "lastOpenFiles": [
+    "README.md",
     "JS-事件循环机制.md",
     "浏览器-web安全.md",
     "浏览器-输入URL网址发生的事情.md",
@@ -107,7 +108,6 @@
     "FE-Webpack.md",
     "JS-为什么不用for而用forEach.md",
     "JS-null和undefined区别.md",
-    "README.md",
     "React-Router.md"
   ]
 }

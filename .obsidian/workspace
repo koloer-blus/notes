@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "JS-事件循环机制.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "JS-事件循环机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "JS-事件循环机制.md"
               }
             }
           }
@@ -99,15 +99,15 @@
   },
   "active": "0c578c58a75771d5",
   "lastOpenFiles": [
-    "README.md",
     "JS-事件循环机制.md",
+    "未命名.md",
+    "README.md",
     "浏览器-web安全.md",
     "浏览器-输入URL网址发生的事情.md",
     "剑指Offer-03.数组中重复的数字.md",
     "JS-如何实现深拷贝.md",
     "FE-Webpack.md",
     "JS-为什么不用for而用forEach.md",
-    "JS-null和undefined区别.md",
-    "React-Router.md"
+    "JS-null和undefined区别.md"
   ]
 }

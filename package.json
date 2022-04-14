@@ -1,0 +1,15 @@
+{
+    "name": "notes",
+    "version": "1.0.0",
+    "description": "notes",
+    "repository": "git@github.com:baiziyu-fe/notes.git",
+    "author": "baiziyu-fe <baiziyu-fe@outlook.com>",
+    "license": "MIT",
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress": "^2.0.0-beta.39"
+    }
+}

@@ -41,8 +41,9 @@
 > 多个嵌套的 `setTimeout` 调用在浏览器中的最小延迟为 4ms。即使我们设置了 `0`，但还是 `4ms`（或者更久一些）
 
 **每个宏任务之后，引擎会立即执行微任务队列中的所有任务，然后再执行其他的宏任务，或渲染，或进行其他任何操作。**
-<img src="  
-https://zh.javascript.info/article/event-loop/eventLoop-full.svg"  alt="" width="407" height="391">
+
+<img src="https://zh.javascript.info/article/event-loop/eventLoop-full.svg"  alt="" width="407" height="391">
+
 微任务会在执行任何其他事件处理，或渲染，或执行任何其他宏任务之前完成。
 
 这很重要，因为它确保了微任务之间的应用程序环境基本相同（没有鼠标坐标更改，没有新的网络数据等）。

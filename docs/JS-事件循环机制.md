@@ -1,9 +1,5 @@
 # 打通JS事件循环机制
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8aGhZQkoFbQ" title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-# 打通JS事件循环机制
-
 > 在了解事件循环机制之前，我们先聊下`javascript`的运行机制以及对应的原因
 
 ## 为什么JavaScrip是单线程
@@ -13,10 +9,13 @@
 
 首先需要明确一点，在worker内，不能直接操作DOM节点，也不能使用[`window`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window)对象的默认方法和属性。并且这种方案允许JavaScript脚本创建多个线程，但是子线程完全受主线程控制。
 
+
 ## EventLoop（事件循环机制）
 
 > 下面的代码以及对应的展示都是来自于：
 > [loupe 代码运行可视化环境](http://latentflip.com/loupe/?code=Y29uc29sZS5sb2coMSk7CgpzZXRUaW1lb3V0KGZ1bmN0aW9uKCl7CiAgICBjb25zb2xlLmxvZygyKQp9LDIwMDApOwoKbmV3IFByb21pc2UoZnVuY3Rpb24ocmVzb2x2ZSl7CiAgICBjb25zb2xlLmxvZygzKTsKICAgIGZvcihsZXQgaSA9IDA7IGkgPCAzOyBpKyspewogICAgICAgIGkgPT0gMiAmJiByZXNvbHZlKCk7CiAgICB9Cn0pLnRoZW4oZnVuY3Rpb24oKXsKICAgIGNvbnNvbGUubG9nKDQpCn0pOwoKY29uc29sZS5sb2coNSk7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+
+首先，EventLoop在没有事情可干的时候，会保持一种经济的方式一直空转。
 
 首先我们利用(Philip Roberts演讲中的)图片来展示整个浏览器`EventLoop`的过程：
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b872cf45e8944b6f996222d33b85cc30~tplv-k3u1fbpfcp-zoom-1.image)
@@ -138,6 +137,32 @@ console.log(5);
 - 接着再取出一个宏任务，同样把在此期间产生的回调入队。再把当前的微任务队列清空。以此往复。
 - 宏任务队列只有一个，而每一个宏任务都有一个自己的微任务队列，每轮循环都是由一个宏任务+多个微任务组成。
 
+### 关于循环引发的页面静止
+
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2d699bb2f5141d986eda3d190a8bc90~tplv-k3u1fbpfcp-watermark.image?)
+
+[测试页面](https://event-loop-tests.glitch.me/while-true-test.html)
+
+首先我们来看一段下面的代码，在页面中点击后进入死循环：
+
+```javascript
+button.addEventListener('click', event => {
+    while(true);
+});
+```
+首先点击后发现这有一个点击任务加入任务队列，然后事件循环去执行任务队列中的点击事件：
+
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/737e59fd3af54428bd318d78297d073e~tplv-k3u1fbpfcp-watermark.image?)
+
+上图中左侧代表任务队列，中间代表事件循环机制，然后右侧代表浏览器的主要线程，也就是样式计算、Dom渲染
+
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05dc412da1a848859a5ae0251ebda21f~tplv-k3u1fbpfcp-watermark.image?)
+
+
+紧接着事件循环机制进入死循环，导致页面所有主线程工作停止。所以我们的页面有时候就会出现直接白屏或者所有的操作没有反应。例如在`React`的函数式组件的渲染`Dom`中去更新你的`state`。
 
 ## 常见任务分类
 
@@ -151,6 +176,29 @@ console.log(5);
 - IO
 - UI render（浏览器独有）
 
+#### setTimeout
+
+设置`setTimeout`为0时，为什么显示不会去执行每一个过程？
+
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6b29a40cabc4a749a14d4a0915e00f0~tplv-k3u1fbpfcp-watermark.image?)
+
+这里需要明白，浏览器的刷新不是说按照我们设定的最小值去执行，而是显示器本身的素质来决定，比如说刷新率60hz,所以导致我们的部分渲染事件白费，因为只会执行其中的一个。
+
+但是`setTimeout`本身就不是为了做动画而产生的，由于它的不精确，即便你设置了0，在不同的浏览器上依旧会有默认的最小值，比如Chrome的4ms。正因如此，使用`setTimeout`执行动画，往往会产生一些明显的漂移现象（在某一帧里浏览器渲染啥也没干，但是到了下一帧的时候去做了两倍的事情）。
+
+#### requestAnimationFrame
+
+**`window.requestAnimationFrame()`**  告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行。就像下面这样（仅限Chrome）：
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0edf6836253c4317b9c359edbeb32cf2~tplv-k3u1fbpfcp-watermark.image?)
+
+它的执行过程更像这样，下面的每一个白色透明方块代表一帧内的渲染线程：
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25fea850f92a4dbd954eb39c7135b89b~tplv-k3u1fbpfcp-watermark.image?)
+
+相比起`setTimeout`它是针对每一帧的过程去处理，避免了执行任务精度丢失的问题。
+
 ### 常见的微任务
 
 - process.nextTick(node 独有)
@@ -158,7 +206,12 @@ console.log(5);
 - Object.observe
 - MutationObserver
 
+#### MutationObserver
+
+[`MutationObserver`](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)接口提供了监视对DOM树所做更改的能力。它被设计为旧的Mutation Events功能的替代品，该功能是DOM3 Events规范的一部分。
+
 ### 为什么要有宏任务和微任务？
+
 为了协调事件、用户交互、脚本、渲染、网络等，用户代理必须使用本节中描述的事件循环。每个[代理](https://tc39.es/ecma262/#sec-agents)都有一个关联的事件循环，这是该代理独有的。事件循环中的任务被分为宏任务和微任务，是为了给高优先级任务一个插队的机会：微任务比宏任务有更高优先级。
 
 ## 参考
@@ -169,3 +222,4 @@ console.log(5);
 - [# Loupe](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
 - [# JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 - [# 解读 JavaScript 之引擎、运行时和堆栈调用](https://www.oschina.net/translate/how-does-javascript-actually-work-part-1)
+- [# MutationObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)

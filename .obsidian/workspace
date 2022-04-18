@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0c578c58a75771d5",
+        "id": "dbc4fb30bca6b733",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JS-事件循环机制.md",
+            "file": "docs/JS-事件循环机制.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS-事件循环机制.md",
+                "file": "docs/JS-事件循环机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JS-事件循环机制.md"
+                "file": "docs/JS-事件循环机制.md"
               }
             }
           }
@@ -97,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0c578c58a75771d5",
+  "active": "dbc4fb30bca6b733",
   "lastOpenFiles": [
-    "JS-事件循环机制.md",
-    "未命名.md",
-    "README.md",
-    "浏览器-web安全.md",
-    "浏览器-输入URL网址发生的事情.md",
-    "剑指Offer-03.数组中重复的数字.md",
-    "JS-如何实现深拷贝.md",
-    "FE-Webpack.md",
-    "JS-为什么不用for而用forEach.md",
-    "JS-null和undefined区别.md"
+    "docs/JS-事件循环机制.md",
+    "docs/JS-函数式编程.md",
+    "docs/剑指Offer-03.数组中重复的数字.md",
+    "docs/浏览器-输入URL网址发生的事情.md",
+    "docs/浏览器-web安全.md",
+    "docs/CSS-实现简单图形.md",
+    "docs/FE-锁版本的那些事.md",
+    "docs/JS-如何实现深拷贝.md",
+    "docs/GIT-奇技淫巧.md",
+    "JS-函数式编程.md"
   ]
 }

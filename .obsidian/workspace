@@ -100,14 +100,14 @@
   "active": "dbc4fb30bca6b733",
   "lastOpenFiles": [
     "docs/README.md",
-    "docs/React-函数式组件.md",
-    "docs/React-State.md",
-    "docs/React-Router.md",
-    "docs/React-[hooks]--useMemo.md",
-    "docs/NGINX-入门教程.md",
-    "docs/React-[hooks]--useEffect.md",
+    "docs/GO-try-catch实现.md",
+    "docs/JS-函数式编程.md",
+    "docs/FE-javascript沙箱.md",
+    "docs/FE-锁版本的那些事.md",
     "docs/FE-Webpack.md",
-    "docs/JS-事件循环机制.md",
-    "docs/JS-函数式编程.md"
+    "docs/GIT-奇技淫巧.md",
+    "docs/感悟-管理学经典.md",
+    "docs/React-函数式组件.md",
+    "docs/React-State.md"
   ]
 }

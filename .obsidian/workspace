@@ -100,14 +100,14 @@
   "active": "dbc4fb30bca6b733",
   "lastOpenFiles": [
     "docs/README.md",
-    "docs/React-[hooks]--useState.md",
+    "docs/React-函数式组件.md",
+    "docs/React-State.md",
     "docs/React-Router.md",
     "docs/React-[hooks]--useMemo.md",
     "docs/NGINX-入门教程.md",
     "docs/React-[hooks]--useEffect.md",
     "docs/FE-Webpack.md",
     "docs/JS-事件循环机制.md",
-    "docs/JS-函数式编程.md",
-    "docs/剑指Offer-03.数组中重复的数字.md"
+    "docs/JS-函数式编程.md"
   ]
 }

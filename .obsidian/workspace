@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "dbc4fb30bca6b733",
+        "id": "01990319e75d323f",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -97,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "dbc4fb30bca6b733",
+  "active": "01990319e75d323f",
   "lastOpenFiles": [
     "docs/README.md",
-    "docs/GO-try-catch实现.md",
-    "docs/JS-函数式编程.md",
-    "docs/FE-javascript沙箱.md",
-    "docs/FE-锁版本的那些事.md",
-    "docs/FE-Webpack.md",
+    "docs/React-Router.md",
+    "docs/React-State.md",
+    "docs/FE-前端懒加载.md",
+    "Pasted image 20220501102741.png",
     "docs/GIT-奇技淫巧.md",
-    "docs/感悟-管理学经典.md",
-    "docs/React-函数式组件.md",
-    "docs/React-State.md"
+    "docs/JS-函数式编程.md",
+    "docs/GO-try-catch实现.md",
+    "docs/FE-javascript沙箱.md",
+    "docs/FE-锁版本的那些事.md"
   ]
 }

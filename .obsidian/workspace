@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/README.md",
+            "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/README.md",
+                "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/README.md"
+                "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md"
               }
             }
           }
@@ -99,15 +99,15 @@
   },
   "active": "01990319e75d323f",
   "lastOpenFiles": [
-    "docs/README.md",
-    "docs/React-Router.md",
-    "docs/React-State.md",
-    "docs/FE-前端懒加载.md",
-    "Pasted image 20220501102741.png",
-    "docs/GIT-奇技淫巧.md",
-    "docs/JS-函数式编程.md",
-    "docs/GO-try-catch实现.md",
+    "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
+    "docs/React--[hooks]--useEvent.md",
+    "docs/React-函数式组件.md",
+    "docs/React-BrowserRouter和HashRouter的区别.md",
+    "docs/React-[hooks]--useMemo.md",
+    "docs/React-[hooks]--useEffect.md",
     "docs/FE-javascript沙箱.md",
-    "docs/FE-锁版本的那些事.md"
+    "docs/React-[hooks]--使用Memo优化函数组件渲染次数.md",
+    "docs/README.md",
+    "docs/React-Router.md"
   ]
 }

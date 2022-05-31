@@ -58,6 +58,10 @@ git show
 ```
 
 ## 提交Commit相关
+### 修改提交信息
+```shell
+git commit --amend --only
+```
 
 ### 修改最近的一次尚未push的commit信息
 
@@ -75,10 +79,17 @@ git commit --amend
 
 ```shell
 git reflog
+
+git reset --hard SHA1234
 ```
 
 
 ## 分支Branch
+### 删除远端分支
+
+```shell
+git push origin --delete del-branch
+```
 
 ### 从错误的分支拉取了内容需要去除这部分内容
 
@@ -101,6 +112,12 @@ git cherry-pick Head
 git fetch -all
 
 git checkout --track origin/daves
+```
+
+### 同步上游分支被删除的分支
+
+```shell
+git fetch -p
 ```
 
 ## Rebase & Merge
@@ -133,6 +150,11 @@ git merge --no-ff --no-commit mybranch
 ```
 
 
+## Tacking File
+### 重命名文件，修改文件大小写，希望被追踪
+```shell
+git mv --force myfile MyFile
+```
 
 ## 参考
 - [# 如果你还不会用 git 回滚代码，那你一定要来看看](https://mp.weixin.qq.com/s/vQ25Ewe6u30arKsW2EDCMw)

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
+            "file": "docs/GIT-奇技淫巧.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
+                "file": "docs/GIT-奇技淫巧.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-Npm、Yarn、Pnpm对比与分析.md"
+                "file": "docs/GIT-奇技淫巧.md"
               }
             }
           }
@@ -99,6 +99,7 @@
   },
   "active": "01990319e75d323f",
   "lastOpenFiles": [
+    "docs/GIT-奇技淫巧.md",
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
     "docs/React--[hooks]--useEvent.md",
     "docs/React-函数式组件.md",
@@ -107,7 +108,6 @@
     "docs/React-[hooks]--useEffect.md",
     "docs/FE-javascript沙箱.md",
     "docs/React-[hooks]--使用Memo优化函数组件渲染次数.md",
-    "docs/README.md",
-    "docs/React-Router.md"
+    "docs/README.md"
   ]
 }

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/GIT-奇技淫巧.md",
+            "file": "docs/GO-try-catch实现.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/GIT-奇技淫巧.md",
+                "file": "docs/GO-try-catch实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/GIT-奇技淫巧.md"
+                "file": "docs/GO-try-catch实现.md"
               }
             }
           }
@@ -99,15 +99,15 @@
   },
   "active": "01990319e75d323f",
   "lastOpenFiles": [
+    "docs/GO-try-catch实现.md",
     "docs/GIT-奇技淫巧.md",
+    "docs/FE-Webpack.md",
+    "docs/FE-style-jsx-loader.md",
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
-    "docs/React--[hooks]--useEvent.md",
-    "docs/React-函数式组件.md",
-    "docs/React-BrowserRouter和HashRouter的区别.md",
-    "docs/React-[hooks]--useMemo.md",
-    "docs/React-[hooks]--useEffect.md",
     "docs/FE-javascript沙箱.md",
-    "docs/React-[hooks]--使用Memo优化函数组件渲染次数.md",
-    "docs/README.md"
+    "docs/FE-锁版本的那些事.md",
+    "docs/FE-前端如何做代码样式分割.md",
+    "docs/FE-前端懒加载.md",
+    "docs/CSS-实现简单图形.md"
   ]
 }

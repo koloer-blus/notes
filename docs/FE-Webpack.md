@@ -99,6 +99,7 @@ webpack 内部所有资源都会以`module`对象形式存在，所有关于资�
 
 
 ## 参考内容
+
 - [# Webapck5 核心打包原理全流程解析，看这一篇就够了](https://mp.weixin.qq.com/s/85S7i3z9pVJyMjVKqXHy6w)
 - [# 【万字】透过分析 webpack 面试题，构建 webpack5.x 知识体系](https://juejin.cn/post/7023242274876162084)
 - [# 当面试官问Webpack的时候他想知道什么](https://juejin.cn/post/6943468761575849992)

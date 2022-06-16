@@ -5,3 +5,9 @@
 - 采用`CSS modules`进行管理
 - 使用`CSS-In-JS`方案（`React`）
 - 使用`style scoped`方案
+
+那么这些方案中有没有最好的呢？或者说，有没有最优解呢？
+
+## CSS 命名和书写规范化管理
+### BEM命名规范
+>BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。

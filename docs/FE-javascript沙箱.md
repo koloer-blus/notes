@@ -84,7 +84,7 @@ poorestSandbox(code, obj);
 
 在ES6当中，我们可以通过代理`(Proxy)`实现对象的劫持。基本实录也是通过window对象的修改进行记录，在卸载时删除这些记录，在应用再次激活时恢复这些记录，来达到模拟沙箱环境的目的。
 
-```
+```js
 // 修改window属性的公共方法
 const updateWindowProp = (prop, value, isDel) => {
     if (value === undefined || isDel) {

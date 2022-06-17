@@ -6,6 +6,7 @@
 - 采用`CSS modules`进行管理
 - 使用`CSS-In-JS`方案（`React`）
 - 使用`style scoped`方案
+- 使用`tailwind`原子化方案
 
 那么这些方案中有没有最好的呢？或者说，有没有最优解呢？
 
@@ -40,6 +41,25 @@ BEM 的目的是告诉其他开发人员更多地从其名称中了解一段标�
 ### ITCSS
 
 ## CSS Modules
+
+### 原生CSS Modules
+
+### 结合CSS预处理器
+
+## CSS in JS
+
+### emotion
+
+### styled-components
+
+## style scoped
+
+### Vue
+
+### React
+
+
+## Tailwind
 
 ## 参考
 - [# CSS — BEM 命名规范](https://juejin.cn/post/6844903672162304013)

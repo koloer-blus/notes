@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "01990319e75d323f",
+        "id": "23c232d0358d208b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/FE-前端如何做代码样式分割.md",
+            "file": "docs/FE-前端如何做CSS模块化方案.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-前端如何做代码样式分割.md",
+                "file": "docs/FE-前端如何做CSS模块化方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,20 +86,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-前端如何做代码样式分割.md"
+                "file": "docs/FE-前端如何做CSS模块化方案.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "01990319e75d323f",
+  "active": "23c232d0358d208b",
   "lastOpenFiles": [
-    "docs/FE-前端如何做代码样式分割.md",
+    "docs/FE-前端如何做CSS模块化方案.md",
     "docs/FE-锁版本的那些事.md",
     "docs/FE-javascript沙箱.md",
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",

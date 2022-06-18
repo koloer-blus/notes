@@ -145,10 +145,58 @@ SMACSS的核心是对CSS规则进行分类，并且通过分类使用CSS架构�
 - 不要过度的依赖对象
 
 ## CSS Modules
+> CSS Modules确保当前CSS样式文件下的所有Class以及动画等名称都会有基于文件的作用域。
 
-### 原生CSS Modules
+### 如何使用
+以React项目为例，现在有一个`App.jsx`和`App.module.css`
 
-### 结合CSS预处理器
+```CSS
+// App.module.css
+
+.head-banner {
+	height: 38px;
+	color: red;
+}
+```
+
+```JSX
+import style from './App.module.css';
+
+const App = () => (
+	<div>
+		<div className={style['head-banner']}>head</div>
+	</div>
+)
+```
+
+#### Vite
+
+在`Vite`中使用需要在`Vite.config.js`中对CSS模块进行[配置](https://vitejs.dev/config/#css-modules)：
+
+```js
+css: {
+
+	modules: {
+
+		generateScopedName: 'sHs[name]__[local]__[hash:base64:5]'
+
+	},
+
+},
+```
+
+#### webpack
+在`webpack`中主要通过[配置CSS-Loader](https://github.com/webpack-contrib/css-loader#modules)来实现CSS模块化的处理：
+
+```js
+{
+        test: /\.css$/i,
+        loader: "css-loader",
+        options: {
+          modules: true,
+        },
+},
+```
 
 ## CSS in JS
 
@@ -172,3 +220,5 @@ SMACSS的核心是对CSS规则进行分类，并且通过分类使用CSS架构�
 - [# OOCSS](https://www.w3cplus.com/css/oocss-concept)
 - [# SMACSS](https://smacss-zh.vercel.app/preface/2-%E4%BB%8B%E7%BB%8D.html)
 - [# ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+- [# 深入浅出CSS Modules](https://segmentfault.com/a/1190000039846173)
+- [# CSS Modules 用法教程](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)

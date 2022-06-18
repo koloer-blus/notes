@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -95,19 +96,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 288.4593505859375,
+    "collapsed": true
   },
   "active": "23c232d0358d208b",
   "lastOpenFiles": [
     "docs/FE-前端如何做CSS模块化方案.md",
+    "docs/FE-CSS 渲染初探.md",
+    "docs/FE-CSS实现简单图形.md",
     "docs/FE-锁版本的那些事.md",
     "docs/FE-javascript沙箱.md",
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
     "docs/FE-style-jsx-loader.md",
     "docs/FE-Webpack.md",
     "docs/GO-try-catch实现.md",
-    "docs/GIT-奇技淫巧.md",
-    "docs/FE-前端懒加载.md",
-    "docs/CSS-实现简单图形.md"
+    "docs/GIT-奇技淫巧.md"
   ]
 }

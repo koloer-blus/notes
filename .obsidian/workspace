@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/FE-前端如何做CSS模块化方案.md",
+            "file": "docs/README.md",
             "mode": "source",
             "source": false
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-前端如何做CSS模块化方案.md",
+                "file": "docs/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-前端如何做CSS模块化方案.md"
+                "file": "docs/README.md"
               }
             }
           }
@@ -101,6 +100,7 @@
   },
   "active": "23c232d0358d208b",
   "lastOpenFiles": [
+    "docs/README.md",
     "docs/FE-前端如何做CSS模块化方案.md",
     "docs/FE-CSS 渲染初探.md",
     "docs/FE-CSS实现简单图形.md",
@@ -109,7 +109,6 @@
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
     "docs/FE-style-jsx-loader.md",
     "docs/FE-Webpack.md",
-    "docs/GO-try-catch实现.md",
-    "docs/GIT-奇技淫巧.md"
+    "docs/GO-try-catch实现.md"
   ]
 }

@@ -199,19 +199,125 @@ css: {
 ```
 
 ## CSS in JS
+> 这是一种通过在JS中维护CSS的方法，除了支持正常的样式字符串书写，还可以借助函数、模板字符串、变量计算等方式帮助我们拓展CSS的性能。
 
-### emotion
 
-### styled-components
+### [emotion](https://emotion.sh/docs/introduction)
+
+emotion除了支持对象样式和字符串样式之外，最大的亮点是支持`source Map`，解决了之前样式代码调试困难的问题。
+
+```js
+import { css, cx } from '@emotion/css'
+
+const color = 'white'
+
+render(
+  <div
+    className={css`
+      padding: 32px;
+      background-color: hotpink;
+      font-size: 24px;
+      border-radius: 4px;
+      &:hover {
+        color: ${color};
+      }
+    `}
+  >
+    Hover to change color.
+  </div>
+)
+```
+
+### [styled-components](https://styled-components.com/docs)
+Style Components 是当下最被认可和接受的 CSS-in-JS 库，目前文档社区都较为完善，并且性能相比Emotion有较大优势。
+
+```js
+const Button = styled.a`
+  /* This renders the buttons above... Edit me! */
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+
+  /* The GitHub button is a primary button
+   * edit this to target it specifically! */
+  ${props => props.primary && css`
+    background: white;
+    color: black;
+  `}
+`
+
+render(
+  <div>
+    <Button
+      href="https://github.com/styled-components/styled-components"
+      target="_blank"
+      rel="noopener"
+      primary
+    >
+      GitHub
+    </Button>
+
+    <Button as={Link} href="/docs">
+      Documentation
+    </Button>
+  </div>
+)
+```
 
 ## style scoped
 
 ### Vue
+```Vue
+<style scoped>
+.example {
+  color: red;
+}
+</style>
+
+<template>
+  <div class="example">hi</div>
+</template>
+```
 
 ### React
+使用[react-scoped-css](https://github.com/gaoxiaoliangz/react-scoped-css)进行处理
+```jsx
+import React from 'react'
+import './Title.scoped.css'
 
+const Title = props => {
+  return (
+    <h1 className="title">
+      <p>{props.children}</p>
+    </h1>
+  )
+}
 
-## Tailwind
+export default Title
+```
+
+```css
+.title[data-v-15763057] {
+  background: #309dcf;
+}
+p[data-v-15763057] {
+  color: #fff;
+}
+```
+
+## [Tailwind](https://www.tailwindcss.cn/)
+>Tailwind CSS 是一个功能类优先的 CSS 框架，它集成了诸如 `flex`, `pt-4`, `text-center` 和 `rotate-90` 这样的的类，它们能直接在脚本标记语言中组合起来，构建出任何设计。
+
+从目前来看，`tailwind`是一种原子化的CSS方案，通过组合和搭配来实现想要的样式。
+
+```html
+<h1 class="flex-auto text-xl font-semibold"> Classic Utility Jacket </h1>
+```
 
 ## 参考
 - [# CSS — BEM 命名规范](https://juejin.cn/post/6844903672162304013)

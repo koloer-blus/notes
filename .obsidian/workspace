@@ -9,6 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
+            "file": "docs/README.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "a825862b552f2cd3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
             "file": "docs/FE-前端竞态条件.md",
             "mode": "source",
             "source": false
@@ -53,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -99,11 +110,11 @@
     "width": 288.4593505859375,
     "collapsed": true
   },
-  "active": "23c232d0358d208b",
+  "active": "a825862b552f2cd3",
   "lastOpenFiles": [
     "docs/FE-前端竞态条件.md",
-    "未命名.md",
     "docs/README.md",
+    "未命名.md",
     "docs/FE-前端懒加载.md",
     "docs/React-[hooks]--useEvent.md",
     "docs/FE-前端如何做CSS模块化方案.md",

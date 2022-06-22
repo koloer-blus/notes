@@ -4,24 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "23c232d0358d208b",
+        "id": "147e7aeaf91c675f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/README.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "a825862b552f2cd3",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "docs/FE-前端竞态条件.md",
+            "file": "docs/感悟-管理学经典.md",
             "mode": "source",
             "source": false
           }
@@ -81,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-前端竞态条件.md",
+                "file": "docs/感悟-管理学经典.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-前端竞态条件.md"
+                "file": "docs/感悟-管理学经典.md"
               }
             }
           }
@@ -110,17 +98,17 @@
     "width": 288.4593505859375,
     "collapsed": true
   },
-  "active": "a825862b552f2cd3",
+  "active": "147e7aeaf91c675f",
   "lastOpenFiles": [
-    "docs/FE-前端竞态条件.md",
+    "docs/感悟-管理学经典.md",
+    "docs/翻译-什么是函数式编程.md",
+    "docs/JS-函数式编程.md",
     "docs/README.md",
-    "未命名.md",
-    "docs/FE-前端懒加载.md",
-    "docs/React-[hooks]--useEvent.md",
+    "docs/JS-模块化浅谈.md",
+    "docs/FE-JS模块依赖为什么不会死循环.md",
     "docs/FE-前端如何做CSS模块化方案.md",
-    "docs/FE-CSS 渲染初探.md",
-    "docs/FE-CSS实现简单图形.md",
     "docs/FE-锁版本的那些事.md",
+    "docs/FE-CSS 渲染初探.md",
     "docs/FE-javascript沙箱.md"
   ]
 }

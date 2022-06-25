@@ -9,7 +9,7 @@
 1. [React Router](./React-Router.md)
 2. [React-State](./React-State.md)
 3. [React-函数式组件](./React-函数式组件.md)
-4. [React Query 快速指南](./React-React Query快速指南.md)
+4. [React Query 快速指南](./React-React-Query快速指南.md)
 5. [`hooks`--useEffect](./React-[hooks]--useEffect.md)
 6. [`hooks`--useMemo](./React-[hooks]--useMemo.md)
 7. [`hooks`--useEvent（自定义）](./React-[hooks]--useEvent.md)

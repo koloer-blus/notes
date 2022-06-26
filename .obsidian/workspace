@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/React-React Query快速指南.md",
+            "file": "docs/FE-Formily指南.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/React-React Query快速指南.md",
+                "file": "docs/FE-Formily指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/React-React Query快速指南.md"
+                "file": "docs/FE-Formily指南.md"
               }
             }
           }
@@ -100,6 +101,7 @@
   },
   "active": "0c6932187d5d2c59",
   "lastOpenFiles": [
+    "docs/FE-Formily指南.md",
     "docs/React-React Query快速指南.md",
     "docs/React-Router.md",
     "docs/README.md",
@@ -108,7 +110,6 @@
     "docs/FE-CSS 渲染初探.md",
     "docs/JS-模块依赖为什么不会死循环.md",
     "docs/JS-模块化浅谈.md",
-    "docs/感悟-管理学经典.md",
-    "docs/翻译-什么是函数式编程.md"
+    "docs/感悟-管理学经典.md"
   ]
 }

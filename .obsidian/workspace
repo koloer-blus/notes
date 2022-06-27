@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -102,14 +101,14 @@
   "active": "0c6932187d5d2c59",
   "lastOpenFiles": [
     "docs/FE-Formily指南.md",
-    "docs/React-React Query快速指南.md",
-    "docs/React-Router.md",
-    "docs/README.md",
-    "docs/React-State.md",
-    "docs/FE-网络跨域.md",
+    "docs/GIT-奇技淫巧.md",
+    "docs/FE-CSS实现简单图形.md",
     "docs/FE-CSS 渲染初探.md",
+    "docs/JS-为什么不用for而用forEach.md",
+    "docs/JS-事件循环机制.md",
+    "docs/JS-如何实现深拷贝.md",
     "docs/JS-模块依赖为什么不会死循环.md",
     "docs/JS-模块化浅谈.md",
-    "docs/感悟-管理学经典.md"
+    "docs/JS-函数式编程.md"
   ]
 }

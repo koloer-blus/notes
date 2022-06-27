@@ -5,8 +5,16 @@
 ### 精确渲染
 在这里`formily`团队参考`Mobx`的历年，针对表单特性和`React`的特性重新定制了全新的轮子[Reactive](https://reactive.formilyjs.org/zh-CN/guide)，该轮子强依赖`proxy`，因此不支持`IE`浏览器。
 
-
 ## 补充介绍
+
+### Core
+![](https://img.alicdn.com/imgextra/i4/O1CN01HlrsLS1hQAJnihhh1_!!6000000004271-55-tps-2431-2037.svg)
+Formily 内核其实是一个 `@formily/reactive` 领域模型。
+实际消费领域模型则主要是依赖 `@formily/reactive` 的 响应器 机制做依赖追踪来消费。
+我们可以在响应器(`Reactions`)中消费 `Form/Field/ArrayField/ObjectField/VoidField` 模型中的任意属性，依赖的属性发生变化，响应器就会重复执行。从而实现了表单层面的 `Reactive` 编程模型。
+
+在`MVVM`模式中，Formily 它提供了 View 和 ViewModel 两层能力，View 则是`@formily/react` `@formily/vue`，专门用来与`@formily/core` 做桥接通讯的，所以，`@formily/core` 的定位就是 ViewModel 层。
+
 
 ### Reactive
 ![](https://img.alicdn.com/imgextra/i4/O1CN01DQMGUL22mFICDsKfY_!!6000000007162-2-tps-1234-614.png)
@@ -42,6 +50,42 @@
 - `autorun`：创建一个自动执行的响应器
 - `rection`：创建一个可以实现脏检查的响应器
 - `Tracker`：创建一个依赖追踪器，需要用户手动执行追踪
+
+#### Computed
+`computed` 是一个可以缓存计算结果的 `Reaction`。
+它的缓存策略是：**只有 `computed` 函数内部所依赖的 `observable` 数据发生变化，函数才会重新执行计算，否则永远读取缓存结果**。
+
+>这里要求的就是 `computed` 函数必须是纯函数，内部依赖的数据要么是 `observable` 数据，要么是外部常量数据，如果是外部变量数据(非 `observable`)，那如果外部变量数据发生变化，`computed` 是不会重新执行计算的。
+
+#### Batch
+合并更新模式，将原子们的更新进行合并，避免重复的数据渲染。
+
+```jsx
+import { observable, autorun, batch } from '@formily/reactive'
+
+const obs = observable({})
+const handler = () => {
+  obs.aa = 123
+  obs.bb = 321
+}
+autorun(() => {
+  console.log(obs.aa, obs.bb)
+})
+batch(() => {
+  handler()
+})
+```
+
+#### 注意事项
+-   尽量少用 `observable/observable.deep` 进行深度包装，不是非不得已就多用 `observable.ref/observable.shallow`，这样性能会更好
+-   领域模型中多用 `computed` 计算属性，它可以智能缓存计算结果
+-   虽然批量操作不是必须的，但是尽量多用 `batch` 模式，这样可以减少 `Reaction` 执行次数
+-   使用 `autorun/reaction` 的时候，一定记得调用 `dispose` 释放函数(也就是调用函数所返回的二阶函数)，否则会内存泄漏
+
+### React
+
+`@formily/react`核心是实现`core`和组件之间的一个绑定关系。
+![](https://img.alicdn.com/imgextra/i1/O1CN013jbRfk1l5n6N7jYH8_!!6000000004768-55-tps-2200-1637.svg)
 
 ## 参考
 - [# Reactive](https://reactive.formilyjs.org/zh-CN/guide)

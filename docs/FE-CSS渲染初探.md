@@ -14,10 +14,10 @@ CSS语法解析当然不是无章可循，他也有属于自己的规则：
 - `Firefox` 使用的是人工编写的自上而下的解析器。
 
 这两种解析器都会将 `CSS` 文件解析成 `StyleSheet` 对象，且每个对象都包含 `CSS` 规则。`CSS` 规则对象则包含选择器和声明对象，以及其他与 `CSS` 语法对应的对象。
-![[Pasted image 20220707152728.png]]
+![](https://raw.githubusercontent.com/chenfengyanyu/my-web-accumulation/master/images/css/render2.png)
 如上图所示，CSS在解析过程中会分解为`Rule`和`Declaration`来操作：
 
-![[Pasted image 20220707152825.png]]
+![](https://raw.githubusercontent.com/chenfengyanyu/my-web-accumulation/master/images/css/css-rule.jpg)
 
 那么具体的解析规则是什么呢？使用`document.styleSheets[0].cssRules`在控制台打印后，我们得到如下结果：
 ```js
@@ -32,7 +32,7 @@ type: 1
 ```
 
 上面这么多的规则，看的我们眼花缭乱，但是不要操之过急，我们还没有利用`webkit`来细看它内部是如何解析CSS的：
-![[Pasted image 20220707153304.png]]
+![](https://raw.githubusercontent.com/chenfengyanyu/my-web-accumulation/master/images/css/test_CSSOM.png)
 通过上图我们可以发现，CSS的相关内容是使用`WebCore`进行解析的，[WebCore](https://github.com/WebKit/webkit/tree/main/Source/WebCore/css):
 `Webkit` 使用了自动代码生成工具生成了相应的代码，也就是说词法分析和语法分析这部分代码是自动生成的，而 `Webkit` 中实现的 `CallBack` 函数就是在 `CSSParser` 中。
 

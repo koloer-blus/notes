@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0c6932187d5d2c59",
+        "id": "3ad4a9aeea9d1733",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/FE-CSS 渲染初探.md",
+            "file": "docs/README.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-CSS 渲染初探.md",
+                "file": "docs/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-CSS 渲染初探.md"
+                "file": "docs/README.md"
               }
             }
           }
@@ -98,17 +98,17 @@
     "width": 288.4593505859375,
     "collapsed": true
   },
-  "active": "0c6932187d5d2c59",
+  "active": "3ad4a9aeea9d1733",
   "lastOpenFiles": [
-    "docs/FE-CSS 渲染初探.md",
+    "docs/README.md",
+    "docs/FE-CSS渲染初探.md",
+    "Pasted image 20220707152728.png.md",
+    "docs/FE-CSS实现简单图形.md",
+    "docs/FE-CDN加速原理初探.md",
     "public/Pasted image 20220707153304.png",
     "docs/MYSQL-数据库命令.md",
-    "docs/README.md",
-    "docs/FE-CDN加速原理初探.md",
     "docs/浏览器-web安全.md",
     "docs/浏览器-输入URL网址发生的事情.md",
-    "docs/FE-eslint原理窥探.md",
-    "docs/JS-函数式编程.md",
-    "docs/JS-模块化浅谈.md"
+    "docs/FE-eslint原理窥探.md"
   ]
 }

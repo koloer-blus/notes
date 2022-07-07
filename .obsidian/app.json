@@ -2,5 +2,8 @@
   "legacyEditor": false,
   "livePreview": true,
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true,
+  "vimMode": false,
+  "showUnsupportedFiles": true
 }

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/FE-Webpack打包详解.md",
+            "file": "docs/JS-函数式编程.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e0aa9ce4aabdb50e",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/FE-Webpack打包详解.md",
+                "file": "docs/JS-函数式编程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/FE-Webpack打包详解.md"
+                "file": "docs/JS-函数式编程.md"
               }
             }
           }
@@ -100,6 +101,8 @@
   },
   "active": "0c6932187d5d2c59",
   "lastOpenFiles": [
+    "docs/JS-函数式编程.md",
+    "docs/JS-模块化浅谈.md",
     "docs/FE-Webpack打包详解.md",
     "docs/README.md",
     "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
@@ -107,8 +110,6 @@
     "docs/FE-Formily指南.md",
     "docs/FE-CSS实现简单图形.md",
     "docs/FE-CSS 渲染初探.md",
-    "docs/LEETCODE-两数相加.md",
-    "docs/LEETCODE-无重复字符的最长子串.md",
-    "docs/浏览器-输入URL网址发生的事情.md"
+    "docs/LEETCODE-两数相加.md"
   ]
 }

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/README.md",
+            "file": "docs/FE-Webpack打包详解.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/README.md",
+                "file": "docs/FE-Webpack打包详解.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/README.md"
+                "file": "docs/FE-Webpack打包详解.md"
               }
             }
           }
@@ -100,15 +100,15 @@
   },
   "active": "0c6932187d5d2c59",
   "lastOpenFiles": [
+    "docs/FE-Webpack打包详解.md",
     "docs/README.md",
+    "docs/FE-Npm、Yarn、Pnpm对比与分析.md",
+    "docs/FE-javascript沙箱.md",
+    "docs/FE-Formily指南.md",
+    "docs/FE-CSS实现简单图形.md",
+    "docs/FE-CSS 渲染初探.md",
     "docs/LEETCODE-两数相加.md",
     "docs/LEETCODE-无重复字符的最长子串.md",
-    "docs/浏览器-输入URL网址发生的事情.md",
-    "docs/剑指Offer-03.数组中重复的数字.md",
-    "docs/感悟-管理学经典.md",
-    "docs/FE-Formily指南.md",
-    "docs/GIT-奇技淫巧.md",
-    "docs/FE-CSS实现简单图形.md",
-    "docs/FE-CSS 渲染初探.md"
+    "docs/浏览器-输入URL网址发生的事情.md"
   ]
 }

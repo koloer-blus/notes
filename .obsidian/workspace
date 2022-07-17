@@ -101,14 +101,14 @@
   "active": "3ad4a9aeea9d1733",
   "lastOpenFiles": [
     "docs/README.md",
+    "docs/FE-前端图片使用说明书.md",
+    "docs/FE-前端如何做CSS模块化方案.md",
+    "docs/GIT-奇技淫巧.md",
+    "docs/FE-CSS渲染初探.md",
     "docs/LEETCODE-回文数.md",
     "docs/React-State.md",
     "docs/LEETCODE-无重复字符的最长子串.md",
     "docs/LEETCODE-两数相加.md",
-    "docs/FE-CSS渲染初探.md",
-    "Pasted image 20220707152728.png.md",
-    "docs/FE-CSS实现简单图形.md",
-    "docs/FE-CDN加速原理初探.md",
-    "public/Pasted image 20220707153304.png"
+    "Pasted image 20220707152728.png.md"
   ]
 }

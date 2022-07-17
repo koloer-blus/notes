@@ -49,7 +49,7 @@
 2. [锁版本的那些事](./FE-锁版本的那些事.md)
 3. [webpack打包详解](FE-Webpack打包详解.md)
 4. [前端懒加载](./FE-前端懒加载.md)
-
+5. [前端图片使用说明书](./FE-前端图片使用说明书.md)
 ## 💦 GO
 1. [GO-try catch 实现](./GO-try-catch实现.md)
 

@@ -14,30 +14,6 @@
             "source": false
           }
         }
-      },
-      {
-        "id": "fd7a9606ab351cbf",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "docs/FE-MobX浅谈.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "a1271d3f641a4854",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "docs/FE-React中如何更好的使用MobX.md",
-            "mode": "source",
-            "source": false
-          }
-        }
       }
     ],
     "direction": "vertical"

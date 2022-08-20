@@ -1,9 +1,9 @@
 module.exports = {
     // 站点配置
     lang: 'zh-CN',
-    title: '白子煜 | 个人小站',
+    title: 'koloer-blus | 个人小站',
     base: '/notes/',
-    description: '白子煜个人笔记',
+    description: 'blus个人笔记',
     head: [
         ['link', {
             rel: 'icon',
@@ -16,7 +16,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: 'https://github.com/baiziyu-fe/notes',
+        repo: 'https://github.com/koloer-blus/notes',
         subSidebar: 'auto',
         docsBranch: 'master',
         editLinkPattern: ':repo/:branch/docs/:path',

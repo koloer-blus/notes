@@ -42,7 +42,7 @@ export function Navbar() {
           to="/"
           className="text-xl font-semibold tracking-tight hover:opacity-70 transition-opacity"
         >
-          Ziyu
+          KOLOER-BLUS
         </Link>
 
         {/* Desktop Navigation */}

@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Ziyu. All rights reserved.
+            © {currentYear} koloer-blus. All rights reserved.
           </p>
 
           {/* Social Links */}

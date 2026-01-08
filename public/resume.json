@@ -1,0 +1,78 @@
+{
+  "name": "张子玉",
+  "title": "全栈开发工程师",
+  "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+  "contact": {
+    "email": "coderfe@outlook.com",
+    "location": "中国",
+    "github": "https://github.com/coderfe",
+    "website": "https://coderfe.github.io"
+  },
+  "summary": "拥有多年全栈开发经验的软件工程师，专注于构建高质量的 Web 应用程序。熟练掌握 React、Vue、Node.js 等现代技术栈，对用户体验和代码质量有着极高的追求。热衷于学习新技术，善于解决复杂问题。",
+  "experience": [
+    {
+      "company": "某科技公司",
+      "position": "高级前端工程师",
+      "startDate": "2021-01",
+      "endDate": "至今",
+      "description": "负责公司核心产品的前端架构设计与开发",
+      "highlights": [
+        "主导前端技术栈升级，从 Vue 2 迁移至 Vue 3，提升开发效率 30%",
+        "设计并实现组件库，统一团队开发规范，减少重复代码 40%",
+        "优化首屏加载性能，将 LCP 从 3.5s 降低至 1.2s",
+        "带领 5 人团队完成多个重要项目的交付"
+      ]
+    },
+    {
+      "company": "某互联网公司",
+      "position": "前端开发工程师",
+      "startDate": "2018-06",
+      "endDate": "2020-12",
+      "description": "参与多个 B 端和 C 端产品的开发工作",
+      "highlights": [
+        "独立完成电商后台管理系统的前端开发",
+        "参与移动端 H5 项目开发，适配多种设备和浏览器",
+        "编写单元测试，代码覆盖率达到 80%",
+        "积极参与代码评审，帮助团队提升代码质量"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "某大学",
+      "degree": "本科",
+      "field": "计算机科学与技术",
+      "startDate": "2014-09",
+      "endDate": "2018-06",
+      "description": "主修计算机科学相关课程，参与多个校园项目开发"
+    }
+  ],
+  "skills": [
+    {
+      "category": "前端开发",
+      "skills": ["React", "Vue", "TypeScript", "Next.js", "Tailwind CSS", "Webpack", "Vite"]
+    },
+    {
+      "category": "后端开发",
+      "skills": ["Node.js", "Express", "NestJS", "Python", "PostgreSQL", "MongoDB", "Redis"]
+    },
+    {
+      "category": "工具与其他",
+      "skills": ["Git", "Docker", "Linux", "CI/CD", "Figma", "Agile"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "个人博客系统",
+      "description": "基于 React 和 GitHub Issues 的个人博客系统，支持 Markdown 渲染、代码高亮、评论功能",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "GitHub API"],
+      "github": "https://github.com/coderfe/notes"
+    },
+    {
+      "name": "在线协作工具",
+      "description": "实时协作的项目管理工具，支持任务看板、文档编辑、团队沟通等功能",
+      "technologies": ["Vue 3", "Node.js", "WebSocket", "PostgreSQL"],
+      "url": "https://example.com"
+    }
+  ]
+}

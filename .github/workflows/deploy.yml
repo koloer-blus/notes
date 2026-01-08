@@ -26,16 +26,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: personal-website/package-lock.json
+          cache: yarn
 
       - name: Install dependencies
-        working-directory: personal-website
-        run: npm ci --legacy-peer-deps
+        run: yarn install --frozen-lockfile
 
       - name: Build
-        working-directory: personal-website
-        run: npm run build
+        run: yarn build
         env:
           VITE_GITHUB_TOKEN: ${{ secrets.PAGE_ISSUES_TOKEN }}
 
@@ -45,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: personal-website/dist
+          path: dist
 
   deploy:
     environment:

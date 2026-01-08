@@ -60,7 +60,7 @@ export function HomePage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
               <span className="block text-foreground">你好，我是</span>
               <span className="block bg-gradient-to-r from-apple-blue to-blue-400 bg-clip-text text-transparent">
-                子玉
+                KOLOER-BLUS
               </span>
             </h1>
           </motion.div>

@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom"
 import { Layout } from "@/components/layout/Layout"
+import { ScrollButtons } from "@/components/ui/scroll-buttons"
 import { HomePage } from "@/pages/HomePage"
 import { ResumePage } from "@/pages/ResumePage"
 import { BlogListPage } from "@/pages/BlogListPage"
@@ -16,6 +17,7 @@ function App() {
           <Route path="/blog/:number" element={<BlogDetailPage />} />
         </Routes>
       </Layout>
+      <ScrollButtons />
     </HashRouter>
   )
 }

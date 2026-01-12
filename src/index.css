@@ -55,7 +55,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "PingFang SC", "SF Pro Display", Inter, system-ui, sans-serif;
+    font-family: "Moon Stars Kai HW", "PingFang SC", "SF Pro Display", Inter, system-ui, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

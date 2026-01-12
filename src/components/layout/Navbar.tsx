@@ -3,17 +3,15 @@ import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const navItems = [
-  { name: "首页", path: "/" },
-  { name: "简历", path: "/resume" },
-  { name: "博客", path: "/blog" },
-]
+import { siteConfig } from "@/config"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
+
+  const { nav, site } = siteConfig
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,36 +40,42 @@ export function Navbar() {
           to="/"
           className="text-xl font-semibold tracking-tight hover:opacity-70 transition-opacity"
         >
-          KOLOER-BLUS
+          {site.name}
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <Link
-                to={item.path}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-8">
+            {nav.items.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    location.pathname === item.path
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 -mr-2 hover:bg-accent rounded-lg transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 -mr-2 hover:bg-accent rounded-lg transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -84,7 +88,7 @@ export function Navbar() {
             className="md:hidden bg-background/95 backdrop-blur-xl border-b"
           >
             <ul className="px-6 py-4 space-y-4">
-              {navItems.map((item) => (
+              {nav.items.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}

@@ -1,4 +1,6 @@
 import { useState, useEffect, useMemo } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronRight, List } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { TocItem } from "@/types"
 
@@ -23,6 +25,7 @@ function extractHeadings(markdown: string): TocItem[] {
 
 export function TableOfContents({ content }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("")
+  const [isExpanded, setIsExpanded] = useState(true)
   const headings = useMemo(() => extractHeadings(content), [content])
 
   useEffect(() => {
@@ -62,30 +65,61 @@ export function TableOfContents({ content }: TableOfContentsProps) {
   }
 
   return (
-    <nav className="space-y-1">
-      <h4 className="font-semibold text-sm mb-4 text-muted-foreground uppercase tracking-wider">
-        目录
-      </h4>
-      <ul className="space-y-2">
-        {headings.map((heading) => (
-          <li
-            key={heading.id}
-            style={{ paddingLeft: `${(heading.level - 1) * 12}px` }}
+    <nav className="bg-muted/30 rounded-lg border border-border/50">
+      {/* Header - 可点击收起/展开 */}
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 transition-colors rounded-lg"
+      >
+        <span className="flex items-center gap-2 font-medium text-sm text-muted-foreground">
+          <List size={16} />
+          目录
+          <span className="text-xs text-muted-foreground/60">
+            ({headings.length})
+          </span>
+        </span>
+        <motion.span
+          animate={{ rotate: isExpanded ? 90 : 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <ChevronRight size={16} className="text-muted-foreground" />
+        </motion.span>
+      </button>
+
+      {/* Content */}
+      <AnimatePresence initial={false}>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
           >
-            <button
-              onClick={() => handleClick(heading.id)}
-              className={cn(
-                "text-sm text-left w-full py-1 transition-colors hover:text-primary",
-                activeId === heading.id
-                  ? "text-primary font-medium"
-                  : "text-muted-foreground"
-              )}
-            >
-              {heading.text}
-            </button>
-          </li>
-        ))}
-      </ul>
+            <ul className="px-4 pb-3 space-y-1 max-h-[60vh] overflow-y-auto">
+              {headings.map((heading) => (
+                <li
+                  key={heading.id}
+                  style={{ paddingLeft: `${(heading.level - 1) * 12}px` }}
+                >
+                  <button
+                    onClick={() => handleClick(heading.id)}
+                    className={cn(
+                      "text-sm text-left w-full py-1.5 px-2 rounded transition-colors hover:bg-muted/50 truncate",
+                      activeId === heading.id
+                        ? "text-primary font-medium bg-primary/10"
+                        : "text-muted-foreground"
+                    )}
+                    title={heading.text}
+                  >
+                    {heading.text}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

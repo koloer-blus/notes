@@ -1,0 +1,7 @@
+export { AnimatedBackground } from "./AnimatedBackground"
+export { ScrollSection } from "./ScrollSection"
+export { PixelTypewriter } from "./PixelTypewriter"
+export { HeroSection } from "./HeroSection"
+export { SkillCard } from "./SkillCard"
+export { ProjectCard } from "./ProjectCard"
+export { CTASection } from "./CTASection"

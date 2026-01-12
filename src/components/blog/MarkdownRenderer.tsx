@@ -140,7 +140,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         h1: ({ children, ...props }) => (
           <h1
             id={String(children).toLowerCase().replace(/\s+/g, "-")}
-            className="scroll-mt-24"
+            className="scroll-mt-24 text-3xl font-bold mt-8 mb-4"
             {...props}
           >
             {children}
@@ -149,7 +149,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         h2: ({ children, ...props }) => (
           <h2
             id={String(children).toLowerCase().replace(/\s+/g, "-")}
-            className="scroll-mt-24"
+            className="scroll-mt-24 text-2xl font-semibold mt-8 mb-3 pb-2 border-b border-border"
             {...props}
           >
             {children}
@@ -158,11 +158,58 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         h3: ({ children, ...props }) => (
           <h3
             id={String(children).toLowerCase().replace(/\s+/g, "-")}
-            className="scroll-mt-24"
+            className="scroll-mt-24 text-xl font-semibold mt-6 mb-3"
             {...props}
           >
             {children}
           </h3>
+        ),
+        h4: ({ children, ...props }) => (
+          <h4
+            id={String(children).toLowerCase().replace(/\s+/g, "-")}
+            className="scroll-mt-24 text-lg font-semibold mt-4 mb-2"
+            {...props}
+          >
+            {children}
+          </h4>
+        ),
+        h5: ({ children, ...props }) => (
+          <h5
+            id={String(children).toLowerCase().replace(/\s+/g, "-")}
+            className="scroll-mt-24 text-base font-semibold mt-4 mb-2"
+            {...props}
+          >
+            {children}
+          </h5>
+        ),
+        h6: ({ children, ...props }) => (
+          <h6
+            id={String(children).toLowerCase().replace(/\s+/g, "-")}
+            className="scroll-mt-24 text-sm font-semibold mt-4 mb-2 text-muted-foreground"
+            {...props}
+          >
+            {children}
+          </h6>
+        ),
+        p: ({ children, ...props }) => (
+          <p className="my-4 leading-7" {...props}>
+            {children}
+          </p>
+        ),
+        ul: ({ children, ...props }) => (
+          <ul className="my-4 ml-6 list-disc space-y-2" {...props}>
+            {children}
+          </ul>
+        ),
+        ol: ({ children, ...props }) => (
+          <ol className="my-4 ml-6 list-decimal space-y-2" {...props}>
+            {children}
+          </ol>
+        ),
+        li: ({ children, ...props }) => (
+          <li className="leading-7" {...props}>
+            {children}
+          </li>
         ),
         a: ({ href, children, ...props }) => (
           <a
@@ -179,18 +226,21 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           <img
             src={src}
             alt={alt}
-            className="rounded-lg shadow-md max-w-full h-auto"
+            className="rounded-lg shadow-md max-w-full h-auto my-4"
             loading="lazy"
             {...props}
           />
         ),
         blockquote: ({ children, ...props }) => (
           <blockquote
-            className="border-l-4 border-primary pl-4 italic text-muted-foreground"
+            className="border-l-4 border-primary pl-4 my-4 italic text-muted-foreground"
             {...props}
           >
             {children}
           </blockquote>
+        ),
+        hr: ({ ...props }) => (
+          <hr className="my-8 border-border" {...props} />
         ),
         table: ({ children, ...props }) => (
           <div className="overflow-x-auto my-6">
@@ -211,6 +261,16 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           <td className="border border-border px-4 py-2" {...props}>
             {children}
           </td>
+        ),
+        strong: ({ children, ...props }) => (
+          <strong className="font-semibold" {...props}>
+            {children}
+          </strong>
+        ),
+        em: ({ children, ...props }) => (
+          <em className="italic" {...props}>
+            {children}
+          </em>
         ),
       }}
     >

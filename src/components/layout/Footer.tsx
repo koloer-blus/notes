@@ -1,7 +1,9 @@
 import { Github, Mail, Linkedin } from "lucide-react"
+import { siteConfig } from "@/config"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const { site, social } = siteConfig
 
   return (
     <footer className="border-t bg-muted/30">
@@ -9,13 +11,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} koloer-blus. All rights reserved.
+            © {currentYear} {site.copyright}
           </p>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/coderfe"
+              href={social.github}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent"
@@ -24,14 +26,14 @@ export function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="mailto:coderfe@outlook.com"
+              href={`mailto:${social.email}`}
               className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent"
               aria-label="Email"
             >
               <Mail size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href={social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent"

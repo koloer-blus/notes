@@ -1,0 +1,82 @@
+{
+  "site": {
+    "name": "KOLOER-BLUS",
+    "title": "个人网站",
+    "description": "Ziyu 的个人网站 - 全栈开发工程师，分享技术与生活",
+    "email": "coderfe@outlook.com",
+    "copyright": "koloer-blus. All rights reserved."
+  },
+  "nav": {
+    "items": [
+      { "name": "首页", "path": "/" },
+      { "name": "简历", "path": "/resume" },
+      { "name": "博客", "path": "/blog" }
+    ]
+  },
+  "social": {
+    "github": "https://github.com/coderfe",
+    "linkedin": "https://linkedin.com",
+    "email": "coderfe@outlook.com"
+  },
+  "hero": {
+    "typewriterText": ["HELLO!"],
+    "greeting": "你好，我是",
+    "name": "KOLOER-BLUS",
+    "description": "全栈开发工程师，专注于构建优雅且高性能的 Web 应用。",
+    "subDescription": "热爱代码，热爱生活。",
+    "scrollHint": "向下滚动探索",
+    "buttons": {
+      "resume": "查看简历",
+      "blog": "阅读博客"
+    }
+  },
+  "skills": {
+    "title": "技术栈",
+    "description": "多年的开发经验让我熟练掌握了多种技术，能够应对各种复杂的开发需求",
+    "items": [
+      {
+        "title": "前端开发",
+        "description": "React、Vue、TypeScript、Next.js、Tailwind CSS 等现代前端技术栈",
+        "icon": "Code",
+        "gradient": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "后端开发",
+        "description": "Node.js、Python、PostgreSQL、MongoDB、Redis 等后端技术",
+        "icon": "Server",
+        "gradient": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "工具与部署",
+        "description": "Git、Docker、Linux、CI/CD、云服务等 DevOps 工具链",
+        "icon": "Rocket",
+        "gradient": "from-orange-500 to-red-500"
+      }
+    ]
+  },
+  "projects": {
+    "title": "精选作品",
+    "description": "这些是我最引以为傲的项目，展示了我的技术能力和创造力",
+    "viewDetail": "查看详情",
+    "items": [
+      {
+        "title": "个人博客系统",
+        "description": "基于 React 和 GitHub Issues 的现代博客系统，支持 Markdown、代码高亮、流程图等",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
+        "tags": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "在线协作工具",
+        "description": "实时协作的项目管理工具，支持任务看板、文档编辑、团队沟通等功能",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
+        "tags": ["Vue 3", "Node.js", "WebSocket"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "让我们一起",
+    "highlight": "创造精彩",
+    "description": "无论是技术交流还是项目合作，我都期待与你的对话。让我们一起把想法变成现实。",
+    "buttonText": "联系我"
+  }
+}

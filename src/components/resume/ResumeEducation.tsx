@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { GraduationCap } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,6 +10,8 @@ interface ResumeEducationProps {
 }
 
 export function ResumeEducation({ education }: ResumeEducationProps) {
+  const { t } = useTranslation('resume')
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +21,7 @@ export function ResumeEducation({ education }: ResumeEducationProps) {
     >
       <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
         <GraduationCap className="text-primary" />
-        教育背景
+        {t('educationTitle')}
       </h2>
       <div className="space-y-6">
         {education.map((edu, index) => (

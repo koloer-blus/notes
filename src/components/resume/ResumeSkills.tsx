@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SkillCategory } from "@/types"
@@ -8,6 +9,8 @@ interface ResumeSkillsProps {
 }
 
 export function ResumeSkills({ skills }: ResumeSkillsProps) {
+  const { t } = useTranslation('resume')
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,7 +20,7 @@ export function ResumeSkills({ skills }: ResumeSkillsProps) {
     >
       <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
         <span className="text-3xl">💡</span>
-        技能专长
+        {t('skillsTitle')}
       </h2>
       <div className="grid gap-6">
         {skills.map((category) => (

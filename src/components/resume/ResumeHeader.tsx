@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Mail, MapPin, Github, Globe } from "lucide-react"
 import { ContactInfo } from "@/types"
 
@@ -11,6 +12,7 @@ interface ResumeHeaderProps {
 }
 
 export function ResumeHeader({ name, title, avatar, contact, summary }: ResumeHeaderProps) {
+  const { t } = useTranslation('resume')
   return (
     <>
       <motion.div
@@ -64,7 +66,7 @@ export function ResumeHeader({ name, title, avatar, contact, summary }: ResumeHe
               className="flex items-center gap-2 hover:text-primary transition-colors"
             >
               <Globe size={18} />
-              网站
+              {t('website')}
             </a>
           )}
         </div>

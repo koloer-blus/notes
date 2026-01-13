@@ -1,9 +1,21 @@
-import siteConfig from "./site.json"
+// 配置文件已迁移到国际化系统
+// 请使用 @/utils/config 中的 useSiteConfig 和 useResumeConfig hooks
 
-export type SiteConfig = typeof siteConfig
+export type NavItem = {
+  name: string
+  path: string
+}
 
-export type NavItem = SiteConfig["nav"]["items"][number]
-export type SkillItem = SiteConfig["skills"]["items"][number]
-export type ProjectItem = SiteConfig["projects"]["items"][number]
+export type SkillItem = {
+  title: string
+  description: string
+  icon: string
+  gradient: string
+}
 
-export { siteConfig }
+export type ProjectItem = {
+  title: string
+  description: string
+  image: string
+  tags: string[]
+}

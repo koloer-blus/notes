@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Briefcase } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,6 +10,8 @@ interface ResumeExperienceProps {
 }
 
 export function ResumeExperience({ experiences }: ResumeExperienceProps) {
+  const { t } = useTranslation('resume')
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +21,7 @@ export function ResumeExperience({ experiences }: ResumeExperienceProps) {
     >
       <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
         <Briefcase className="text-primary" />
-        工作经历
+        {t('experienceTitle')}
       </h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (

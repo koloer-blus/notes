@@ -1,0 +1,87 @@
+{
+  "skillsTitle": "Skills & Expertise",
+  "experienceTitle": "Work Experience",
+  "educationTitle": "Education",
+  "projectsTitle": "Projects",
+  "sourceCode": "Source Code",
+  "visit": "Visit",
+  "website": "Website",
+  "resume": {
+    "name": "ME",
+    "title": "Full-Stack Developer",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+    "contact": {
+      "email": "coderfe@outlook.com",
+      "location": "China",
+      "github": "https://github.com/coderfe",
+      "website": "https://coderfe.github.io"
+    },
+    "summary": "Software engineer with years of full-stack development experience, focused on building high-quality web applications. Proficient in modern tech stacks like React, Vue, Node.js, with high standards for user experience and code quality. Passionate about learning new technologies and solving complex problems.",
+    "experience": [
+      {
+        "company": "Tech Company",
+        "position": "Senior Frontend Engineer",
+        "startDate": "2021-01",
+        "endDate": "Present",
+        "description": "Responsible for frontend architecture design and development of core products",
+        "highlights": [
+          "Led frontend tech stack upgrade from Vue 2 to Vue 3, improving development efficiency by 30%",
+          "Designed and implemented component library, unified team development standards, reduced duplicate code by 40%",
+          "Optimized first screen loading performance, reduced LCP from 3.5s to 1.2s",
+          "Led a 5-person team to deliver multiple important projects"
+        ]
+      },
+      {
+        "company": "Internet Company",
+        "position": "Frontend Developer",
+        "startDate": "2018-06",
+        "endDate": "2020-12",
+        "description": "Participated in development of multiple B2B and B2C products",
+        "highlights": [
+          "Independently completed frontend development of e-commerce backend management system",
+          "Participated in mobile H5 project development, adapted to various devices and browsers",
+          "Wrote unit tests with 80% code coverage",
+          "Actively participated in code reviews, helping team improve code quality"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "University",
+        "degree": "Bachelor's Degree",
+        "field": "Computer Science and Technology",
+        "startDate": "2014-09",
+        "endDate": "2018-06",
+        "description": "Majored in computer science courses, participated in multiple campus project development"
+      }
+    ],
+    "skills": [
+      {
+        "category": "Frontend Development",
+        "skills": ["React", "Vue", "TypeScript", "Next.js", "Tailwind CSS", "Webpack", "Vite"]
+      },
+      {
+        "category": "Backend Development",
+        "skills": ["Node.js", "Express", "NestJS", "Python", "PostgreSQL", "MongoDB", "Redis"]
+      },
+      {
+        "category": "Tools & Others",
+        "skills": ["Git", "Docker", "Linux", "CI/CD", "Figma", "Agile"]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Personal Blog System",
+        "description": "Personal blog system based on React and GitHub Issues, supporting Markdown rendering, code highlighting, comment functionality",
+        "technologies": ["React", "TypeScript", "Tailwind CSS", "GitHub API"],
+        "github": "https://github.com/coderfe/notes"
+      },
+      {
+        "name": "Online Collaboration Tool",
+        "description": "Real-time collaborative project management tool supporting task boards, document editing, team communication",
+        "technologies": ["Vue 3", "Node.js", "WebSocket", "PostgreSQL"],
+        "url": "https://example.com"
+      }
+    ]
+  }
+}

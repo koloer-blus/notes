@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 import { motion } from "framer-motion"
-import { ArrowLeft, Calendar, Clock, ExternalLink } from "lucide-react"
+import { ArrowLeft, Calendar, Clock, ExternalLink, BookOpen } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MarkdownRenderer } from "@/components/blog/MarkdownRenderer"
@@ -10,9 +11,11 @@ import { GiscusComments } from "@/components/blog/GiscusComments"
 import { fetchIssueByNumber } from "@/services/github"
 import { BlogPost } from "@/types"
 import { formatDate, formatRelativeTime } from "@/lib/utils"
+import { calculateReadingTime } from "@/utils/readingTime"
 
-export function BlogDetailPage() {
+export default function BlogDetailPage() {
   const { number } = useParams<{ number: string }>()
+  const { t } = useTranslation()
   const [post, setPost] = useState<BlogPost | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -41,11 +44,11 @@ export function BlogDetailPage() {
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4">
-        <p className="text-xl text-muted-foreground">文章不存在</p>
+        <p className="text-xl text-muted-foreground">{t('blog.postNotFound')}</p>
         <Link to="/blog">
           <Button variant="outline">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            返回博客列表
+            {t('blog.backToBlogList')}
           </Button>
         </Link>
       </div>
@@ -68,7 +71,7 @@ export function BlogDetailPage() {
               <Link to="/blog">
                 <Button variant="ghost" className="gap-2">
                   <ArrowLeft size={18} />
-                  返回列表
+                  {t('blog.backToList')}
                 </Button>
               </Link>
             </motion.div>
@@ -108,12 +111,16 @@ export function BlogDetailPage() {
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                 <span className="flex items-center gap-2">
                   <Calendar size={16} />
-                  发布于 {formatDate(post.created_at)}
+                  {t('blog.publishedAt')} {formatDate(post.created_at)}
+                </span>
+                <span className="flex items-center gap-2">
+                  <BookOpen size={16} />
+                  {t('blog.readingTime', { minutes: calculateReadingTime(post.body) })}
                 </span>
                 {post.updated_at !== post.created_at && (
                   <span className="flex items-center gap-2">
                     <Clock size={16} />
-                    更新于 {formatRelativeTime(post.updated_at)}
+                    {t('blog.updatedAt')} {formatRelativeTime(post.updated_at)}
                   </span>
                 )}
                 <a
@@ -123,7 +130,7 @@ export function BlogDetailPage() {
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <ExternalLink size={16} />
-                  在 GitHub 上查看
+                  {t('blog.viewOnGitHub')}
                 </a>
               </div>
             </motion.header>
@@ -145,7 +152,7 @@ export function BlogDetailPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-16 pt-10 border-t"
             >
-              <h2 className="text-2xl font-bold mb-8">评论</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('blog.commentsTitle')}</h2>
               <GiscusComments />
             </motion.div>
           </article>

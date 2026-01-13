@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Sun, Moon, Monitor } from "lucide-react"
 import { useTheme } from "@/hooks/useTheme"
 import { cn } from "@/lib/utils"
@@ -9,11 +10,12 @@ interface ThemeToggleProps {
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme()
+  const { t } = useTranslation('site')
 
   const themes = [
-    { value: "light" as const, icon: Sun, label: "浅色" },
-    { value: "dark" as const, icon: Moon, label: "深色" },
-    { value: "system" as const, icon: Monitor, label: "系统" },
+    { value: "light" as const, icon: Sun, label: t('common.theme.light') },
+    { value: "dark" as const, icon: Moon, label: t('common.theme.dark') },
+    { value: "system" as const, icon: Monitor, label: t('common.theme.system') },
   ]
 
   return (
@@ -53,6 +55,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
 // 简化版本 - 只切换明暗
 export function ThemeToggleSimple({ className }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme()
+  const { t } = useTranslation('site')
 
   const isDark =
     theme === "dark" ||
@@ -71,7 +74,7 @@ export function ThemeToggleSimple({ className }: ThemeToggleProps) {
         "p-2 rounded-lg transition-colors hover:bg-accent",
         className
       )}
-      aria-label={isDark ? "切换到浅色模式" : "切换到深色模式"}
+      aria-label={isDark ? t('common.theme.toggleToLight') : t('common.theme.toggleToDark')}
     >
       <motion.div
         initial={false}

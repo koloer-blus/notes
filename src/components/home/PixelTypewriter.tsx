@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from "react"
-import Typed from "typed.js"
-import { motion } from "framer-motion"
+import { useEffect, useRef, useState, memo } from "react"
 
 interface PixelTypewriterProps {
   strings?: string[]
@@ -8,47 +6,63 @@ interface PixelTypewriterProps {
   className?: string
 }
 
-export function PixelTypewriter({
+export const PixelTypewriter = memo(function PixelTypewriter({
   strings = ["HELLO!"],
   onComplete,
   className = "",
 }: PixelTypewriterProps) {
   const typedRef = useRef<HTMLSpanElement>(null)
-  const typedInstance = useRef<Typed | null>(null)
   const [showCursor, setShowCursor] = useState(true)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     if (!typedRef.current) return
 
-    typedInstance.current = new Typed(typedRef.current, {
-      strings,
-      typeSpeed: 150,
-      backSpeed: 0,
-      showCursor: false,
-      loop: false,
-      onComplete: () => {
-        // 打字完成后闪烁光标几次然后隐藏
-        let blinkCount = 0
-        const blinkInterval = setInterval(() => {
-          setShowCursor((prev) => !prev)
-          blinkCount++
-          if (blinkCount >= 6) {
-            clearInterval(blinkInterval)
-            setShowCursor(false)
-            onComplete?.()
-          }
-        }, 300)
-      },
-    })
+    let typedInstance: { destroy: () => void } | null = null
+
+    // 延迟加载 typed.js
+    const loadTyped = async () => {
+      const { default: Typed } = await import("typed.js")
+      
+      if (!typedRef.current) return
+      
+      setIsLoaded(true)
+      
+      typedInstance = new Typed(typedRef.current, {
+        strings,
+        typeSpeed: 150,
+        backSpeed: 0,
+        showCursor: false,
+        loop: false,
+        onComplete: () => {
+          let blinkCount = 0
+          const blinkInterval = setInterval(() => {
+            setShowCursor((prev) => !prev)
+            blinkCount++
+            if (blinkCount >= 6) {
+              clearInterval(blinkInterval)
+              setShowCursor(false)
+              onComplete?.()
+            }
+          }, 300)
+        },
+      })
+    }
+
+    // 使用 requestIdleCallback 或立即加载
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(() => loadTyped(), { timeout: 100 })
+    } else {
+      loadTyped()
+    }
 
     return () => {
-      typedInstance.current?.destroy()
+      typedInstance?.destroy()
     }
   }, [strings, onComplete])
 
   return (
     <div className={`pixel-typewriter ${className}`}>
-      {/* 像素风格文字容器 */}
       <div className="relative inline-flex items-center">
         {/* 扫描线效果 */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-lg">
@@ -56,12 +70,7 @@ export function PixelTypewriter({
         </div>
 
         {/* 主文字 */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="relative"
-        >
+        <div className={`relative transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <span
             ref={typedRef}
             className="pixel-text text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-wider"
@@ -80,22 +89,18 @@ export function PixelTypewriter({
           />
           {/* 像素光标 */}
           {showCursor && (
-            <motion.span
-              initial={{ opacity: 1 }}
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              className="inline-block ml-2 w-4 md:w-6 lg:w-8 h-12 md:h-16 lg:h-24 bg-cyan-400 align-middle"
+            <span
+              className="inline-block ml-2 w-4 md:w-6 lg:w-8 h-12 md:h-16 lg:h-24 bg-cyan-400 align-middle animate-pulse"
               style={{
                 boxShadow: "0 0 10px rgba(0, 255, 255, 0.8)",
               }}
             />
           )}
-        </motion.div>
+        </div>
       </div>
 
       {/* 像素装饰元素 */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* 角落装饰 */}
         <PixelCorner position="top-left" />
         <PixelCorner position="top-right" />
         <PixelCorner position="bottom-left" />
@@ -134,9 +139,9 @@ export function PixelTypewriter({
       `}</style>
     </div>
   )
-}
+})
 
-// 像素角落装饰组件
+// 像素角落装饰组件 - 使用 CSS 动画
 function PixelCorner({
   position,
 }: {
@@ -150,14 +155,12 @@ function PixelCorner({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
-      className={`absolute ${positionClasses[position]} w-8 h-8 md:w-12 md:h-12`}
+    <div
+      className={`absolute ${positionClasses[position]} w-8 h-8 md:w-12 md:h-12 animate-fade-in`}
+      style={{ animationDelay: "0.5s", animationFillMode: "both" }}
     >
       <div className="w-full h-1 bg-cyan-400/60" />
       <div className="w-1 h-full bg-cyan-400/60" />
-    </motion.div>
+    </div>
   )
 }

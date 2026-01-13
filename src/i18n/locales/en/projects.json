@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "title": "Featured Works",
+    "description": "These are the projects I'm most proud of, showcasing my technical skills and creativity",
+    "viewDetail": "View Details",
+    "items": [
+      {
+        "title": "Personal Blog System",
+        "description": "Modern blog system based on React and GitHub Issues, supporting Markdown, code highlighting, flowcharts, etc.",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
+        "tags": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "Online Collaboration Tool",
+        "description": "Real-time collaborative project management tool supporting task boards, document editing, team communication",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
+        "tags": ["Vue 3", "Node.js", "WebSocket"]
+      }
+    ]
+  }
+}

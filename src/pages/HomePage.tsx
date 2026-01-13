@@ -6,7 +6,7 @@ import {
   ProjectCard,
   CTASection,
 } from "@/components/home"
-import { siteConfig } from "@/config"
+import { useSiteConfig, useProjectsConfig } from "@/utils/config"
 
 // 图标映射
 const iconMap: Record<string, LucideIcon> = {
@@ -15,8 +15,9 @@ const iconMap: Record<string, LucideIcon> = {
   Rocket,
 }
 
-export function HomePage() {
-  const { skills, projects } = siteConfig
+export default function HomePage() {
+  const { skills } = useSiteConfig()
+  const projects = useProjectsConfig()
 
   return (
     <div className="relative overflow-hidden">

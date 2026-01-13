@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, useCallback } from "react"
+import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronRight, List } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -26,7 +27,41 @@ function extractHeadings(markdown: string): TocItem[] {
 export function TableOfContents({ content }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("")
   const [isExpanded, setIsExpanded] = useState(true)
+  const { t } = useTranslation()
   const headings = useMemo(() => extractHeadings(content), [content])
+
+  // 处理初始 hash 滚动
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (hash && headings.length > 0) {
+      // 延迟执行以确保 DOM 已渲染
+      const timer = setTimeout(() => {
+        const element = document.getElementById(decodeURIComponent(hash))
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+          setActiveId(decodeURIComponent(hash))
+        }
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [headings])
+
+  // 监听 URL hash 变化
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1)
+      if (hash) {
+        const element = document.getElementById(decodeURIComponent(hash))
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+          setActiveId(decodeURIComponent(hash))
+        }
+      }
+    }
+
+    window.addEventListener("hashchange", handleHashChange)
+    return () => window.removeEventListener("hashchange", handleHashChange)
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,6 +69,11 @@ export function TableOfContents({ content }: TableOfContentsProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveId(entry.target.id)
+            // 更新 URL hash（不触发滚动）
+            const newHash = `#${encodeURIComponent(entry.target.id)}`
+            if (window.location.hash !== newHash) {
+              history.replaceState(null, "", newHash)
+            }
           }
         })
       },
@@ -53,12 +93,15 @@ export function TableOfContents({ content }: TableOfContentsProps) {
     return () => observer.disconnect()
   }, [headings])
 
-  const handleClick = (id: string) => {
+  const handleClick = useCallback((id: string) => {
     const element = document.getElementById(id)
     if (element) {
+      // 更新 URL hash
+      window.location.hash = encodeURIComponent(id)
       element.scrollIntoView({ behavior: "smooth" })
+      setActiveId(id)
     }
-  }
+  }, [])
 
   if (headings.length === 0) {
     return null
@@ -73,7 +116,7 @@ export function TableOfContents({ content }: TableOfContentsProps) {
       >
         <span className="flex items-center gap-2 font-medium text-sm text-muted-foreground">
           <List size={16} />
-          目录
+          {t('blog.toc')}
           <span className="text-xs text-muted-foreground/60">
             ({headings.length})
           </span>

@@ -57,6 +57,7 @@
 | 样式 | Tailwind CSS + shadcn/ui |
 | 动画 | Framer Motion + GSAP |
 | 路由 | React Router (HashRouter) |
+| 国际化 | react-i18next |
 | Markdown | react-markdown + Shiki + Mermaid + KaTeX |
 | 评论 | Giscus |
 | 打字机 | typed.js |
@@ -104,9 +105,36 @@ npm run preview
 
 ## ⚙️ 配置说明
 
-### 1. 网站基本配置
+### 1. 国际化配置
 
-编辑 `src/config/site.json` 文件，配置网站的所有文案：
+项目支持完整的中英文双语切换。翻译文件位于 `src/i18n/locales/` 目录：
+
+```
+src/i18n/locales/
+├── zh/                    # 中文翻译
+│   ├── site.json         # 站点信息、导航、首页等
+│   ├── projects.json     # 项目展示内容
+│   └── resume.json       # 简历数据和UI标签
+└── en/                    # 英文翻译
+    ├── site.json
+    ├── projects.json
+    └── resume.json
+```
+
+使用配置钩子获取翻译内容：
+
+```typescript
+import { useSiteConfig, useProjectsConfig, useResumeConfig } from '@/utils/config'
+
+// 在组件中使用
+const { site, nav, hero } = useSiteConfig()
+const { projects } = useProjectsConfig()
+const { resume } = useResumeConfig()
+```
+
+### 2. 网站基本配置
+
+编辑 `src/i18n/locales/zh/site.json` 和 `src/i18n/locales/en/site.json` 文件：
 
 ```json
 {
@@ -155,7 +183,7 @@ npm run preview
 }
 ```
 
-### 2. 博客配置
+### 3. 博客配置
 
 编辑 `src/services/github.ts`，修改 GitHub 仓库信息：
 
@@ -173,7 +201,7 @@ VITE_GITHUB_TOKEN=your_github_token
 
 2. 在 [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens) 创建 Token（无需任何权限，仅用于提高 API 限制）
 
-### 3. 评论系统配置
+### 4. 评论系统配置
 
 1. 访问 [giscus.app](https://giscus.app/zh-CN) 获取配置
 2. 编辑 `src/components/blog/GiscusComments.tsx`：
@@ -219,7 +247,7 @@ VITE_GITHUB_TOKEN=your_github_token
 }
 ```
 
-### 5. 部署配置
+### 6. 部署配置
 
 编辑 `vite.config.ts` 中的 `base` 路径：
 
@@ -260,7 +288,6 @@ export default defineConfig({
 
 ```
 ├── public/
-│   └── resume.json          # 简历配置文件
 ├── src/
 │   ├── components/
 │   │   ├── blog/            # 博客相关组件
@@ -281,9 +308,11 @@ export default defineConfig({
 │   │   │   └── Navbar.tsx
 │   │   ├── resume/          # 简历相关组件
 │   │   └── ui/              # UI 基础组件 (shadcn/ui)
-│   ├── config/
-│   │   ├── site.json        # 网站文案配置
-│   │   └── index.ts         # 配置导出
+│   ├── i18n/               # 国际化配置
+│   │   ├── locales/        # 翻译文件
+│   │   │   ├── zh/         # 中文翻译
+│   │   │   └── en/         # 英文翻译
+│   │   └── index.ts        # i18n 配置
 │   ├── hooks/               # 自定义 Hooks
 │   ├── lib/                 # 工具函数
 │   ├── pages/               # 页面组件
@@ -294,6 +323,8 @@ export default defineConfig({
 │   ├── services/            # API 服务
 │   │   └── github.ts        # GitHub API 封装
 │   ├── types/               # TypeScript 类型定义
+│   ├── utils/               # 工具函数
+│   │   └── config.ts        # 配置工具函数
 │   ├── App.tsx              # 应用入口
 │   ├── index.css            # 全局样式
 │   └── main.tsx             # 渲染入口

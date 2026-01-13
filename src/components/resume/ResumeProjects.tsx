@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 import { Github, Globe } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,6 +10,8 @@ interface ResumeProjectsProps {
 }
 
 export function ResumeProjects({ projects }: ResumeProjectsProps) {
+  const { t } = useTranslation('resume')
+
   if (!projects || projects.length === 0) {
     return null
   }
@@ -21,7 +24,7 @@ export function ResumeProjects({ projects }: ResumeProjectsProps) {
     >
       <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
         <span className="text-3xl">🚀</span>
-        项目经历
+        {t('projectsTitle')}
       </h2>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
@@ -47,7 +50,7 @@ export function ResumeProjects({ projects }: ResumeProjectsProps) {
                     className="text-sm text-primary hover:underline flex items-center gap-1"
                   >
                     <Github size={14} />
-                    源码
+                    {t('sourceCode')}
                   </a>
                 )}
                 {project.url && (
@@ -58,7 +61,7 @@ export function ResumeProjects({ projects }: ResumeProjectsProps) {
                     className="text-sm text-primary hover:underline flex items-center gap-1"
                   >
                     <Globe size={14} />
-                    访问
+                    {t('visit')}
                   </a>
                 )}
               </div>

@@ -7,19 +7,12 @@
     "copyright": "koloer-blus. All rights reserved."
   },
   "nav": {
-    "items": [
-      { "name": "首页", "path": "/" },
-      { "name": "简历", "path": "/resume" },
-      { "name": "博客", "path": "/blog" }
-    ]
-  },
-  "social": {
-    "github": "https://github.com/coderfe",
-    "linkedin": "https://linkedin.com",
-    "email": "coderfe@outlook.com"
+    "home": "首页",
+    "blog": "博客",
+    "resume": "简历"
   },
   "hero": {
-    "typewriterText": ["HELLO!"],
+    "typewriterText": ["你好！"],
     "greeting": "你好，我是",
     "name": "KOLOER-BLUS",
     "description": "全栈开发工程师，专注于构建优雅且高性能的 Web 应用。",
@@ -54,29 +47,43 @@
       }
     ]
   },
-  "projects": {
-    "title": "精选作品",
-    "description": "这些是我最引以为傲的项目，展示了我的技术能力和创造力",
-    "viewDetail": "查看详情",
-    "items": [
-      {
-        "title": "个人博客系统",
-        "description": "基于 React 和 GitHub Issues 的现代博客系统，支持 Markdown、代码高亮、流程图等",
-        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
-        "tags": ["React", "TypeScript", "Tailwind CSS"]
-      },
-      {
-        "title": "在线协作工具",
-        "description": "实时协作的项目管理工具，支持任务看板、文档编辑、团队沟通等功能",
-        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
-        "tags": ["Vue 3", "Node.js", "WebSocket"]
-      }
-    ]
-  },
   "cta": {
     "title": "让我们一起",
     "highlight": "创造精彩",
     "description": "无论是技术交流还是项目合作，我都期待与你的对话。让我们一起把想法变成现实。",
     "buttonText": "联系我"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "记录技术探索与生活感悟",
+    "searchPlaceholder": "搜索文章标题或内容...",
+    "clearFilters": "清除筛选",
+    "noMatchingPosts": "没有找到匹配的文章",
+    "noPosts": "暂无文章",
+    "foundPosts": "找到 {{count}} 篇相关文章",
+    "comments": "{{count}} 条评论",
+    "updatedAt": "更新于",
+    "publishedAt": "发布于",
+    "readingTime": "{{minutes}} 分钟阅读",
+    "backToList": "返回列表",
+    "postNotFound": "文章不存在",
+    "backToBlogList": "返回博客列表",
+    "viewOnGitHub": "在 GitHub 上查看",
+    "commentsTitle": "评论",
+    "toc": "目录"
+  },
+  "common": {
+    "loading": "加载中...",
+    "theme": {
+      "light": "浅色",
+      "dark": "深色", 
+      "system": "系统",
+      "toggleToLight": "切换到浅色模式",
+      "toggleToDark": "切换到深色模式"
+    },
+    "language": {
+      "switchToEnglish": "Switch to English",
+      "switchToChinese": "切换到中文"
+    }
   }
 }

@@ -1,0 +1,89 @@
+{
+  "site": {
+    "name": "KOLOER-BLUS",
+    "title": "Personal Website",
+    "description": "Ziyu's personal website - Full-stack developer sharing technology and life",
+    "email": "coderfe@outlook.com",
+    "copyright": "koloer-blus. All rights reserved."
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "resume": "Resume"
+  },
+  "hero": {
+    "typewriterText": ["HELLO!"],
+    "greeting": "Hello, I'm",
+    "name": "KOLOER-BLUS",
+    "description": "Full-stack developer focused on building elegant and high-performance web applications.",
+    "subDescription": "Love coding, love life.",
+    "scrollHint": "Scroll down to explore",
+    "buttons": {
+      "resume": "View Resume",
+      "blog": "Read Blog"
+    }
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "description": "Years of development experience have made me proficient in various technologies, capable of handling complex development requirements",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Modern frontend tech stack including React, Vue, TypeScript, Next.js, Tailwind CSS",
+        "icon": "Code",
+        "gradient": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "Backend Development",
+        "description": "Backend technologies including Node.js, Python, PostgreSQL, MongoDB, Redis",
+        "icon": "Server",
+        "gradient": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "Tools & Deployment",
+        "description": "DevOps toolchain including Git, Docker, Linux, CI/CD, cloud services",
+        "icon": "Rocket",
+        "gradient": "from-orange-500 to-red-500"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Let's",
+    "highlight": "Create Amazing Things",
+    "description": "Whether it's technical exchange or project collaboration, I look forward to our conversation. Let's turn ideas into reality together.",
+    "buttonText": "Contact Me"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Exploring technology and sharing life insights",
+    "searchPlaceholder": "Search posts by title or content...",
+    "clearFilters": "Clear filters",
+    "noMatchingPosts": "No matching posts found",
+    "noPosts": "No posts yet",
+    "foundPosts": "Found {{count}} related posts",
+    "comments": "{{count}} comments",
+    "updatedAt": "Updated",
+    "publishedAt": "Published",
+    "readingTime": "{{minutes}} min read",
+    "backToList": "Back to list",
+    "postNotFound": "Post not found",
+    "backToBlogList": "Back to blog list",
+    "viewOnGitHub": "View on GitHub",
+    "commentsTitle": "Comments",
+    "toc": "Table of Contents"
+  },
+  "common": {
+    "loading": "Loading...",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System", 
+      "toggleToLight": "Switch to light mode",
+      "toggleToDark": "Switch to dark mode"
+    },
+    "language": {
+      "switchToEnglish": "Switch to English",
+      "switchToChinese": "切换到中文"
+    }
+  }
+}

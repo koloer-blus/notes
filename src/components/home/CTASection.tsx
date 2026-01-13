@@ -2,10 +2,10 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ScrollSection } from "./ScrollSection"
-import { siteConfig } from "@/config"
+import { useSiteConfig } from "@/utils/config"
 
 export function CTASection() {
-  const { cta, site } = siteConfig
+  const { cta, site } = useSiteConfig()
 
   return (
     <section className="py-32 px-6 relative overflow-hidden">

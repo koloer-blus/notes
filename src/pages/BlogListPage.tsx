@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useMemo } from "react"
 import { Link, useSearchParams } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 import { motion } from "framer-motion"
-import { Calendar, Clock, MessageCircle } from "lucide-react"
+import { Calendar, Clock, MessageCircle, BookOpen } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Pagination } from "@/components/ui/pagination"
@@ -9,9 +10,11 @@ import { SearchInput } from "@/components/ui/search-input"
 import { fetchIssues, fetchLabels, PaginatedResult } from "@/services/github"
 import { BlogPost, Label } from "@/types"
 import { formatDate, formatRelativeTime } from "@/lib/utils"
+import { calculateReadingTime } from "@/utils/readingTime"
 
-export function BlogListPage() {
+export default function BlogListPage() {
   const [searchParams, setSearchParams] = useSearchParams()
+  const { t } = useTranslation()
   const [postsResult, setPostsResult] = useState<PaginatedResult<BlogPost>>({
     data: [],
     totalPages: 1,
@@ -124,9 +127,9 @@ export function BlogListPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">博客</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('blog.title')}</h1>
           <p className="text-xl text-muted-foreground">
-            记录技术探索与生活感悟
+            {t('blog.subtitle')}
           </p>
         </motion.div>
 
@@ -140,7 +143,7 @@ export function BlogListPage() {
           <SearchInput
             value={searchQuery}
             onChange={handleSearchChange}
-            placeholder="搜索文章标题或内容..."
+            placeholder={t('blog.searchPlaceholder')}
             className="max-w-md mx-auto"
           />
         </motion.div>
@@ -178,7 +181,7 @@ export function BlogListPage() {
                   onClick={clearFilters}
                   className="px-4 py-2 rounded-full text-sm font-medium bg-destructive/10 text-destructive hover:bg-destructive/20 transition-all"
                 >
-                  清除筛选
+                  {t('blog.clearFilters')}
                 </button>
               )}
             </div>
@@ -198,7 +201,7 @@ export function BlogListPage() {
             className="text-center py-20"
           >
             <p className="text-xl text-muted-foreground">
-              {hasActiveFilters ? "没有找到匹配的文章" : "暂无文章"}
+              {hasActiveFilters ? t('blog.noMatchingPosts') : t('blog.noPosts')}
             </p>
           </motion.div>
         ) : (
@@ -210,7 +213,7 @@ export function BlogListPage() {
                 animate={{ opacity: 1 }}
                 className="mb-6 text-center text-muted-foreground"
               >
-                找到 {filteredPosts.length} 篇相关文章
+                {t('blog.foundPosts', { count: filteredPosts.length })}
               </motion.div>
             )}
 
@@ -265,16 +268,20 @@ export function BlogListPage() {
                             <Calendar size={14} />
                             {formatDate(post.created_at)}
                           </span>
+                          <span className="flex items-center gap-1">
+                            <BookOpen size={14} />
+                            {t('blog.readingTime', { minutes: calculateReadingTime(post.body) })}
+                          </span>
                           {post.updated_at !== post.created_at && (
                             <span className="flex items-center gap-1">
                               <Clock size={14} />
-                              更新于 {formatRelativeTime(post.updated_at)}
+                              {t('blog.updatedAt')} {formatRelativeTime(post.updated_at)}
                             </span>
                           )}
                           {post.comments > 0 && (
                             <span className="flex items-center gap-1">
                               <MessageCircle size={14} />
-                              {post.comments} 条评论
+                              {t('blog.comments', { count: post.comments })}
                             </span>
                           )}
                         </div>

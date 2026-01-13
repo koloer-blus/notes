@@ -1,17 +1,30 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { siteConfig } from "@/config"
+import { useSiteConfig } from "@/utils/config"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { LanguageSwitcher } from "@/components/ui/language-switcher"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
+  const { t } = useTranslation()
 
-  const { nav, site } = siteConfig
+  const { nav, site } = useSiteConfig()
+
+  // 获取导航项的翻译名称
+  const getNavItemName = (path: string) => {
+    const pathMap: Record<string, string> = {
+      '/': t('nav.home'),
+      '/blog': t('nav.blog'),
+      '/resume': t('nav.resume')
+    }
+    return pathMap[path]
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,16 +70,18 @@ export function Navbar() {
                       : "text-muted-foreground"
                   )}
                 >
-                  {item.name}
+                  {getNavItemName(item.path) || item.name}
                 </Link>
               </li>
             ))}
           </ul>
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             className="p-2 -mr-2 hover:bg-accent rounded-lg transition-colors"
@@ -99,7 +114,7 @@ export function Navbar() {
                         : "text-muted-foreground"
                     )}
                   >
-                    {item.name}
+                    {getNavItemName(item.path) || item.name}
                   </Link>
                 </li>
               ))}

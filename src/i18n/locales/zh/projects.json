@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "title": "精选作品",
+    "description": "这些是我最引以为傲的项目，展示了我的技术能力和创造力",
+    "viewDetail": "查看详情",
+    "items": [
+      {
+        "title": "个人博客系统",
+        "description": "基于 React 和 GitHub Issues 的现代博客系统，支持 Markdown、代码高亮、流程图等",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
+        "tags": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "title": "在线协作工具",
+        "description": "实时协作的项目管理工具，支持任务看板、文档编辑、团队沟通等功能",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
+        "tags": ["Vue 3", "Node.js", "WebSocket"]
+      }
+    ]
+  }
+}

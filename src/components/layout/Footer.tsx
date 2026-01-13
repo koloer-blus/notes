@@ -1,9 +1,9 @@
 import { Github, Mail, Linkedin } from "lucide-react"
-import { siteConfig } from "@/config"
+import { useSiteConfig } from "@/utils/config"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  const { site, social } = siteConfig
+  const { site, social } = useSiteConfig()
 
   return (
     <footer className="border-t bg-muted/30">

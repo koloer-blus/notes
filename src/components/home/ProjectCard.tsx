@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { ScrollSection } from "./ScrollSection"
-import { siteConfig } from "@/config"
+import { useProjectsConfig } from "@/utils/config"
 
 interface ProjectCardProps {
   title: string
@@ -11,7 +11,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, image, tags, index }: ProjectCardProps) {
-  const { projects } = siteConfig
+  const projects = useProjectsConfig()
 
   return (
     <ScrollSection
